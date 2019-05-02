@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ActorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/views/ActorView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/views/MenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/assignment-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/assignment-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/assignment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/BaseView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -99,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="109">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -228,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556803867223" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556804143437" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -293,12 +282,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556798220205</updated>
-      <workItem from="1556798224838" duration="5612000" />
+      <workItem from="1556798224838" duration="5879000" />
     </task>
+    <task id="LOCAL-00001" summary="Added menu and actor still needs db connection and affiliations to be configured correctly">
+      <created>1556803998477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556803998477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5612000" />
+    <option name="totallyTimeSpent" value="5879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1962" y="35" width="1440" height="823" extended-state="0" />
@@ -340,6 +337,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added menu and actor still needs db connection and affiliations to be configured correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added menu and actor still needs db connection and affiliations to be configured correctly" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build.sbt">
@@ -447,8 +448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="109">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
