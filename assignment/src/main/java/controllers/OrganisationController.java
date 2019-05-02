@@ -1,9 +1,11 @@
 package controllers;
 
+
 import models.Organisation;
 import repository.OrganisationRepository;
 import views.OrganisationView;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -34,7 +36,8 @@ public class OrganisationController {
 
         // Try to insert organisation and display message based on success
         try {
-            organisationRepository.insert(organisation);
+            Connection connection = organisationRepository.databaseSetup();
+            organisationRepository.insert(connection, organisation);
             organisationView.displaySuccessMessage();
         } catch (SQLException e) {
             organisationView.displayDuplicateEntryMessage();
