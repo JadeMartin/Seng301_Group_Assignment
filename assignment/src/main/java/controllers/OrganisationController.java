@@ -26,7 +26,7 @@ public class OrganisationController {
     /**
      * Inserts an organisation by:
      * - Asking for the organisation name
-     * - Inserting the organisation into the database
+     * - Inserting the organisation into the database.db
      * - If there is a duplicate entry: display error message and do not insert
      *   otherwise display success message
      */
