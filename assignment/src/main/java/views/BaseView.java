@@ -27,6 +27,14 @@ public class BaseView {
     }
 
     /**
+     * get user input when expecting int from scanner
+     * @return most recent int input
+     */
+    public int getIntInput() { return scanner.nextInt(); }
+
+    public double getDoubleInput() { return scanner.nextDouble(); }
+
+    /**
      * Displays a message with the type set to error
      * @param messageString The string to add to the message
      */

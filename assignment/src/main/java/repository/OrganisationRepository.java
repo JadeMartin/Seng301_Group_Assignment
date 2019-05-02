@@ -7,25 +7,13 @@ import java.sql.*;
 /**
  * Provides an interface with the database.db
  */
-public class OrganisationRepository {
+public class OrganisationRepository extends BaseRepository{
     /**
      * Inserts the given organisation into the database.db.
      * TODO: Right now this method just emulates the duplicate entry check. Change once we got db set up
      * @param
      * @throws
      */
-    public Connection databaseSetup() {
-
-        // the path to the sqlite file, here it is at the root of current project
-        String url = "jdbc:sqlite:database.db";
-        System.out.println("open connection to " + url);
-        try(Connection connection = DriverManager.getConnection(url)) {
-            return connection;
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return null;
-    }
 
     public void insert(Connection connection, Organisation organisation) throws SQLException {
         if(null != connection && null != organisation.getOrganisationName()) {

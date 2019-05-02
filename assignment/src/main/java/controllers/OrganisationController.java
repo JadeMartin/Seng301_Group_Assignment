@@ -38,7 +38,7 @@ public class OrganisationController {
         try {
             Connection connection = organisationRepository.databaseSetup();
             organisationRepository.insert(connection, organisation);
-            organisationView.displaySuccessMessage();
+           // organisationView.displaySuccessMessage();
         } catch (SQLException e) {
             organisationView.displayDuplicateEntryMessage();
         }
