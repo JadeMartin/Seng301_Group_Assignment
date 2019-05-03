@@ -1,5 +1,10 @@
 package views;
 
+import models.Actor;
+import models.Organisation;
+
+import java.util.ArrayList;
+
 public class ActorView extends BaseView {
 
     /**
@@ -28,5 +33,16 @@ public class ActorView extends BaseView {
         //TODO make enter actually skip
         System.out.println("Enter Level of trust press enter to skip: ");
         return getDoubleInput();
+    }
+
+    /**
+     * provide user input to select actor
+     * @param actorArrayList
+     * @return actor  id
+     */
+    public int getActorId(ArrayList<Actor> actorArrayList) {
+        System.out.println("Select an actor enter id: ");
+        return getIntInput();
+
     }
 }

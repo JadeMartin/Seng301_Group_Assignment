@@ -10,16 +10,20 @@ public class Affiliation {
     int actorId;
     int organisationId;
     String role;
-    Date startDate;
-    Date endDate;
+    String startDate;
+    String endDate;
 
     /**
      * Constructor for an Affiliation
+     * @param actorId
+     * @param organisationId
      * @param role
      * @param startDate
      * @param endDate
      */
-    public Affiliation(String role, Date startDate, Date endDate) {
+    public Affiliation(int actorId, int organisationId, String role, String startDate, String endDate) {
+        this.actorId = actorId;
+        this.organisationId = organisationId;
         this.role = role;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -30,11 +34,11 @@ public class Affiliation {
         this.role = role;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -43,11 +47,11 @@ public class Affiliation {
         return role;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 

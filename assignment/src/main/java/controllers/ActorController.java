@@ -1,11 +1,13 @@
 package controllers;
 
+import models.Organisation;
 import repository.ActorRepository;
 import views.ActorView;
 import models.Actor;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class ActorController {
     ActorView actorView;
@@ -44,4 +46,24 @@ public class ActorController {
             //actorView.displayDuplicateEntryMessage();
         }
     }
+
+    /**
+     * Select an actor by:
+     * Getting a list of actors
+     * output them and asking for a selection which is the actors id
+     * @return actorId int id for the actor selected
+     */
+    public int selectActor() {
+        Connection connection = actorRepository.databaseSetup();
+        int actorId;
+        try {
+            ArrayList<Actor> actorArrayList = actorRepository.listAllActors(connection);
+            actorId = actorView.getActorId(actorArrayList);
+            return actorId;
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return 0;
+    }
 }
+

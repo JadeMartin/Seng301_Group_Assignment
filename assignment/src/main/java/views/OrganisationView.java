@@ -1,5 +1,9 @@
 package views;
 
+import models.Organisation;
+
+import java.util.ArrayList;
+
 /**
  * Contains anything that the user sees or interacts with
  * These include all print statements and scanner inputs
@@ -27,5 +31,16 @@ public class OrganisationView extends BaseView {
      */
     public void displaySuccessMessage() {
         super.displaySuccess("The organisation was inserted");
+    }
+
+    /**
+     * provide user input to select organisation
+     * @param organisationArrayList
+     * @return organisation id
+     */
+    public int getOrganisationId(ArrayList<Organisation>  organisationArrayList) {
+        System.out.println("Select an organisation enter id: ");
+        return getIntInput();
+
     }
 }
