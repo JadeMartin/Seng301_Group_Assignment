@@ -32,19 +32,19 @@ public class AffiliationController {
      *   otherwise display success message
      */
     public void insertAffiliation(int actorId, int organisationId) {
-        String affiliationRole = affiliationView.getRole();
-        String affiliationStartDate = affiliationView.getStartDate();
-        String affiliationEndDate = affiliationView.getEndDate();
-        Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
-
-        // Try to insert organisation and display message based on success
-        try {
-            Connection connection = affiliationRepository.databaseSetup();
-            affiliationRepository.insert(connection, affiliation);
-            // organisationView.displaySuccessMessage();
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
+//        String affiliationRole = affiliationView.getRole();
+//        String affiliationStartDate = affiliationView.getStartDate();
+//        String affiliationEndDate = affiliationView.getEndDate();
+//        Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
+//
+//        // Try to insert organisation and display message based on success
+//        try {
+//            Connection connection = affiliationRepository.databaseSetup();
+//            affiliationRepository.insert(connection, affiliation);
+//            // organisationView.displaySuccessMessage();
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
     }
 }
 

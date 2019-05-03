@@ -37,9 +37,8 @@ public class OrganisationController {
 
         // Try to insert organisation and display message based on success
         try {
-            Connection connection = organisationRepository.databaseSetup();
-            organisationRepository.insert(connection, organisation);
-           // organisationView.displaySuccessMessage();
+            organisationRepository.insert(organisation);
+            organisationView.displaySuccessMessage();
         } catch (SQLException e) {
             System.out.println(e);
             organisationView.displayDuplicateEntryMessage();
@@ -53,15 +52,15 @@ public class OrganisationController {
      * @return organisationId int id for the organisation selected
      */
     public int selectOrganisation() {
-        Connection connection = organisationRepository.databaseSetup();
-        int organisationId;
-        try {
-            ArrayList<Organisation> organisationArrayList = organisationRepository.listAllOrganisations(connection);
-            organisationId = organisationView.getOrganisationId(organisationArrayList);
-            return organisationId;
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
+//        Connection connection = organisationRepository.databaseSetup();
+//        int organisationId;
+//        try {
+//            ArrayList<Organisation> organisationArrayList = organisationRepository.listAllOrganisations(connection);
+//            organisationId = organisationView.getOrganisationId(organisationArrayList);
+//            return organisationId;
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
         return 0;
     }
 }

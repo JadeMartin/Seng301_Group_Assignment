@@ -16,12 +16,12 @@ public class OrganisationRepository extends BaseRepository{
      * @throws
      */
 
-    public void insert(Connection connection, Organisation organisation) throws SQLException {
-        if(null != connection && null != organisation.getOrganisationName()) {
-            PreparedStatement statement = connection.prepareStatement("insert into organisation(name) values (?)");
+    public void insert(Organisation organisation) throws SQLException {
+
+        if(null != getConnection() && null != organisation.getOrganisationName()) {
+            PreparedStatement statement = getConnection().prepareStatement("insert into organisation(name) values (?)");
             // use indexes of wildcard ("?") starting from 1
             statement.setString(1, organisation.getOrganisationName());
-            System.out.println("rows added: " + statement.executeUpdate());
             statement.closeOnCompletion();
         }
         else {

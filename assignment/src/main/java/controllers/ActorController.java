@@ -31,20 +31,20 @@ public class ActorController {
      *   otherwise display success message
      */
     public void insertActor() {
-        String actorFirstName = actorView.getFirstName();
-        String actorLastName = actorView.getLastName();
-        Double actorLevelOfTrust = actorView.getLevelOfTrust();
-        Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
-
-        // Try to insert organisation and display message based on success
-        try {
-            Connection connection = actorRepository.databaseSetup();
-            actorRepository.insert(connection, actor);
-            // organisationView.displaySuccessMessage();
-        } catch (SQLException e) {
-            System.out.println(e);
-            //actorView.displayDuplicateEntryMessage();
-        }
+//        String actorFirstName = actorView.getFirstName();
+//        String actorLastName = actorView.getLastName();
+//        Double actorLevelOfTrust = actorView.getLevelOfTrust();
+//        Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
+//
+//        // Try to insert organisation and display message based on success
+//        try {
+//            Connection connection = actorRepository.databaseSetup();
+//            actorRepository.insert(connection, actor);
+//            // organisationView.displaySuccessMessage();
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//            //actorView.displayDuplicateEntryMessage();
+//        }
     }
 
     /**
@@ -54,15 +54,15 @@ public class ActorController {
      * @return actorId int id for the actor selected
      */
     public int selectActor() {
-        Connection connection = actorRepository.databaseSetup();
-        int actorId;
-        try {
-            ArrayList<Actor> actorArrayList = actorRepository.listAllActors(connection);
-            actorId = actorView.getActorId(actorArrayList);
-            return actorId;
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
+//        Connection connection = actorRepository.databaseSetup();
+//        int actorId;
+//        try {
+//            ArrayList<Actor> actorArrayList = actorRepository.listAllActors(connection);
+//            actorId = actorView.getActorId(actorArrayList);
+//            return actorId;
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
         return 0;
     }
 }
