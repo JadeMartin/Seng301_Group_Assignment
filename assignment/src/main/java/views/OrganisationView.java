@@ -19,6 +19,8 @@ public class OrganisationView extends BaseView {
         return getInput();
     }
 
+    public void displayNameError() { displayError("Illegal Organisation name"); }
+
     /**
      * Displays the message relating to if the organisation already exists
      */

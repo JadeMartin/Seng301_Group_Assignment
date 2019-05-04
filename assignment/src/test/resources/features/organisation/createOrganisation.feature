@@ -4,19 +4,20 @@ Feature: Create Organisation
   Background: The database is working and empty
     Given I am connected to the database
     And I reset the database
+    Then The database should be empty
 
   Scenario: Create an organisation with a valid name
-    Given I provide the organisation name "organisation"
+    Given I create an organisation with the name "organisation"
     When I submit the organisation
-    Then The organisation should exist
+    Then My organisation should exist
 
-  Scenario: Create an organisation without an empty name
-    Given I provide the organisation name ""
+  Scenario: Create an organisation with an empty name
+    Given I create an organisation with the name ""
     When I submit the organisation
-    Then the organisation should not exist
+    Then My organisation should not exist
 
-  Scenario: Create an organisation with a taken name
-    Given The organisation "organisation" exists in the database
-    And I provide the organisation name "organisation"
+  Scenario: Create an organisation twice
+    Given I create an organisation with the name "organisation"
     When I submit the organisation
+    And I submit the organisation
     Then An exception should be thrown

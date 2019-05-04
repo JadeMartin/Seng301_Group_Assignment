@@ -1,8 +1,6 @@
 package repository;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class BaseRepository {
 
@@ -23,6 +21,13 @@ public class BaseRepository {
         }
     }
 
+    public ResultSet getAllByTableName(String tableName) throws SQLException {
+        assert null != connection;
+        PreparedStatement statement = getConnection().prepareStatement("select * from " + tableName);
+        ResultSet resultSet = statement.executeQuery();
+        statement.closeOnCompletion();
+        return resultSet;
+    }
 
     public Connection getConnection() {
         return connection;

@@ -25,6 +25,13 @@ public class OrganisationController {
         organisationRepository = new OrganisationRepository();
     }
 
+    private boolean isValidated(Organisation organisation) {
+        if (organisation.getOrganisationName() != "") {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Inserts an organisation by:
      * - Asking for the organisation name
@@ -35,6 +42,11 @@ public class OrganisationController {
     public void insertOrganisation() {
         String organisationName = organisationView.getName();
         Organisation organisation = new Organisation(organisationName);
+
+        if (isValidated(organisation)) {
+            organisationView.displayNameError();
+            return;
+        }
 
         // Try to insert organisation and display message based on success
         try {
