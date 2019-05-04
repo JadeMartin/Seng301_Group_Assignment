@@ -22,6 +22,7 @@ public class OrganisationRepository extends BaseRepository{
             PreparedStatement statement = getConnection().prepareStatement("insert into organisation(name) values (?)");
             // use indexes of wildcard ("?") starting from 1
             statement.setString(1, organisation.getOrganisationName());
+            statement.executeUpdate();
             statement.closeOnCompletion();
         }
         else {

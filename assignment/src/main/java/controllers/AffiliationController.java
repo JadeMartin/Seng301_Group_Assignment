@@ -32,6 +32,8 @@ public class AffiliationController {
      *   otherwise display success message
      */
     public void insertAffiliation(int actorId, int organisationId) {
+
+
 //        String affiliationRole = affiliationView.getRole();
 //        String affiliationStartDate = affiliationView.getStartDate();
 //        String affiliationEndDate = affiliationView.getEndDate();
