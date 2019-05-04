@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * Controls organisation based functionality
  */
 public class OrganisationController {
+
     OrganisationView organisationView;
     OrganisationRepository organisationRepository;
 

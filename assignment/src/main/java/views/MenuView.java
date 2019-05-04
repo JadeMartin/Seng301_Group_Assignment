@@ -20,7 +20,7 @@ public class MenuView extends BaseView {
                 //Maybe add viewing all Actors
                 "Press 3 to create a new Affiliation between an Actor and an Organisation. \n" +
                 //Maybe add viewing all Affiliations
-                "Press 0 to end program. ");
+                "Press 0 to end program. \n");
         return getIntInput();
     }
 }
