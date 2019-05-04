@@ -15,6 +15,10 @@ public class BaseView {
      * Constructor
      */
     public BaseView() {
+        setScanner();
+    }
+
+    public void setScanner() {
         scanner = new Scanner(System.in);
     }
 
@@ -59,6 +63,20 @@ public class BaseView {
     public void displaySuccess(String messageString) {
         Message message = new Message(messageString, Message.Type.SUCCESS);
         message.displayMessage();
+    }
+
+    /**
+     * Displays the message relating to if the input is an incorrect format
+     */
+    public void displayIncorrectInput() {
+        displayError("Input is an incorrect format");
+    }
+
+    /**
+     * Displays the message relating to if the input is out of bounds
+     */
+    public void displayOutOfBounds() {
+        displayError("Input is out of bounds");
     }
 
 }

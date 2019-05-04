@@ -2,6 +2,8 @@ package controllers;
 
 import views.MenuView;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 public class MenuController {
 
     private MenuView menuView;
@@ -9,6 +11,9 @@ public class MenuController {
     private ActorController actorController;
     private AffiliationController affiliationController;
 
+    /**
+     * Constructor
+     */
     public MenuController() {
         this.menuView = new MenuView();
         this.organisationController = new OrganisationController();
@@ -16,23 +21,40 @@ public class MenuController {
         this.affiliationController = new AffiliationController();
     }
 
-    public void start() {
+    /**
+     * Loop through menu items and call relevant handler associated to it
+     */
+    public void startMenuLoop() {
 
-        //TODO check for validation of ints
-        int option = menuView.getMenuAction();
+        while(true) {
+            int option;
+            try {
+                option = menuView.getMenuAction();
+            } catch (Exception e) {
+                menuView.displayIncorrectInput();
+                continue;
+            }
 
-        while(option != 0) { // Loop around with a menu
             switch(option) {
+                case 0:
+                    System.exit(0);
+                    break;
+
                 case 1:
                     organisationController.insertOrganisation();
                     break;
+
                 case 2:
                     actorController.insertActor();
                     break;
+
                 case 3:
                     affiliationInsertHandler();
+                    break;
+
+                default:
+                    menuView.displayOutOfBounds();
             }
-            option = menuView.getMenuAction();
         }
     }
 

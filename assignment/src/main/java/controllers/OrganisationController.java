@@ -40,7 +40,6 @@ public class OrganisationController {
             organisationRepository.insert(organisation);
             organisationView.displaySuccessMessage();
         } catch (SQLException e) {
-            System.out.println(e);
             organisationView.displayDuplicateEntryMessage();
         }
     }

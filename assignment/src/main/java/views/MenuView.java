@@ -11,6 +11,8 @@ public class MenuView extends BaseView {
      * @return the user's menu option that they submitted
      */
     public int getMenuAction() {
+
+        setScanner();
         System.out.println("Please Enter an Action: \n" +
                 "Press 1 to create a new Organisation. \n" +
                 //Maybe add viewing all organisations
