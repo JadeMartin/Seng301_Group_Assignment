@@ -11,11 +11,9 @@ import java.util.ArrayList;
 public class OrganisationRepository extends BaseRepository{
     /**
      * Inserts the given organisation into the database.db.
-     * TODO: Right now this method just emulates the duplicate entry check. Change once we got db set up
      * @param
      * @throws
      */
-
     public void insert(Organisation organisation) throws SQLException {
 
         if (null != getConnection() && !organisation.getOrganisationName().equals("")) {
@@ -30,19 +28,25 @@ public class OrganisationRepository extends BaseRepository{
         }
     }
 
-    /**
-     * List all organisations in the database
-     * @param connection
-     * @return ArrayList of all organisations added in the database
-     * @throws SQLException
-     */
-    public ArrayList<Organisation> listAllOrganisations(Connection connection) throws SQLException {
-        ArrayList<Organisation> organisationArrayList = new ArrayList<>();
-        if(true) {
-            System.out.println(connection);
-        } else {
-            System.out.println("Failed to get any organisations");
-        }
-        return organisationArrayList;
+    public ResultSet getAll() throws SQLException {
+        return super.getAllByTableName("Organisation");
     }
+
+
+
+//    /**
+//     * List all organisations in the database
+//     * @param connection
+//     * @return ArrayList of all organisations added in the database
+//     * @throws SQLException
+//     */
+//    public ArrayList<Organisation> listAllOrganisations(Connection connection) throws SQLException {
+//        ArrayList<Organisation> organisationArrayList = new ArrayList<>();
+//        if(true) {
+//            System.out.println(connection);
+//        } else {
+//            System.out.println("Failed to get any organisations");
+//        }
+//        return organisationArrayList;
+//    }
 }

@@ -37,9 +37,14 @@ public class BaseView {
      * get user input when expecting int from scanner
      * @return most recent int input
      */
-    public int getIntInput() { return scanner.nextInt(); }
+    public int getIntInput() {
+        return Integer.parseInt(scanner.nextLine());
+    }
 
-    public double getDoubleInput() { return scanner.nextDouble(); }
+    public Double getDoubleInput() {
+        String input = scanner.nextLine();
+        return input.equals("") ? null : Double.parseDouble(input);
+    }
 
     /**
      * Displays a message with the type set to error

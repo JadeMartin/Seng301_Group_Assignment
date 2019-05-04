@@ -3,7 +3,7 @@ Feature: Create Organisation
 
   Background: The database is working and empty
     Given I am connected to the database
-    And I reset the database
+    When I reset the database
     Then The database should be empty
 
   Scenario: Create an organisation with a valid name

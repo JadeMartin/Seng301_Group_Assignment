@@ -8,7 +8,7 @@ public class Actor{
     int actorId;
     String firstName;
     String lastName;
-    double levelOfTrust;
+    Double levelOfTrust;
 
     /**
      * Constructor for an Actor Entity
@@ -16,7 +16,7 @@ public class Actor{
      * @param lastName
      * @param levelOfTrust
      */
-    public Actor(String firstName, String lastName, double levelOfTrust) {
+    public Actor(String firstName, String lastName, Double levelOfTrust) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.levelOfTrust = levelOfTrust;
@@ -31,8 +31,8 @@ public class Actor{
         this.lastName = lastName;
     }
 
-    public void setLevelOfTrust(double levelOfTrust) {
-        this.firstName = firstName;
+    public void setLevelOfTrust(Double levelOfTrust) {
+        this.levelOfTrust = levelOfTrust;
     }
 
     //--- Getters ---
@@ -44,7 +44,7 @@ public class Actor{
         return lastName;
     }
 
-    public double getLevelOfTrust() {
+    public Double getLevelOfTrust() {
         return levelOfTrust;
     }
 

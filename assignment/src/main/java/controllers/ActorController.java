@@ -6,6 +6,7 @@ import views.ActorView;
 import models.Actor;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -31,20 +32,37 @@ public class ActorController {
      *   otherwise display success message
      */
     public void insertActor() {
-//        String actorFirstName = actorView.getFirstName();
-//        String actorLastName = actorView.getLastName();
-//        Double actorLevelOfTrust = actorView.getLevelOfTrust();
-//        Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
-//
-//        // Try to insert organisation and display message based on success
-//        try {
-//            Connection connection = actorRepository.databaseSetup();
-//            actorRepository.insert(connection, actor);
-//            // organisationView.displaySuccessMessage();
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//            //actorView.displayDuplicateEntryMessage();
-//        }
+        String actorFirstName = actorView.getFirstName();
+        String actorLastName = actorView.getLastName();
+        Double actorLevelOfTrust = actorView.getLevelOfTrust();
+        Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
+
+        // Try to insert actor and display message based on success
+        try {
+            if (!checkIfHomonym(actor)) {
+                actorRepository.insert(actor);
+                actorView.displaySuccessMessage();
+            } else {
+                actorView.displayNotHomonymMessage();
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+    private boolean checkIfHomonym(Actor actor) throws SQLException {
+        //TODO: Display affiliations
+        boolean isHomonym = false;
+        ResultSet actorSet = actorRepository.getAllByFirstAndLast(actor.getFirstName(), actor.getLastName());
+
+        while(actorSet.next()) {
+            if (actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"))) {
+                return true;
+            }
+        }
+
+        return isHomonym;
+
     }
 
     /**
@@ -54,15 +72,13 @@ public class ActorController {
      * @return actorId int id for the actor selected
      */
     public int selectActor() {
-//        Connection connection = actorRepository.databaseSetup();
-//        int actorId;
-//        try {
-//            ArrayList<Actor> actorArrayList = actorRepository.listAllActors(connection);
-//            actorId = actorView.getActorId(actorArrayList);
-//            return actorId;
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//        }
+        try {
+            ResultSet actorSet = actorRepository.getAll();
+            return actorView.getActorId(actorSet);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        // return 0 to return user to main menu
         return 0;
     }
 }

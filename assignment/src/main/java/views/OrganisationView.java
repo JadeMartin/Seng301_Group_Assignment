@@ -2,6 +2,8 @@ package views;
 
 import models.Organisation;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -40,9 +42,12 @@ public class OrganisationView extends BaseView {
      * @param organisationArrayList
      * @return organisation id
      */
-    public int getOrganisationId(ArrayList<Organisation>  organisationArrayList) {
-        System.out.println("Select an organisation enter id: ");
+    public int getOrganisationId(ResultSet resultSet) throws SQLException {
+        System.out.println("Select an organisation by entering id: ");
+        System.out.println("0: Back to menu");
+        while (resultSet.next()) {
+            System.out.println(String.format("%d: %s", resultSet.getInt("organisation_id"), resultSet.getString("name")));
+        }
         return getIntInput();
-
     }
 }

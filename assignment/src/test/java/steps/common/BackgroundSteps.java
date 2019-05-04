@@ -2,6 +2,7 @@ package steps.common;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.junit.Assert;
 import repository.BackgroundTestRepository;
 
@@ -32,7 +33,7 @@ public class BackgroundSteps {
     /**
      * Empties all tables in the database
      */
-    @Given("I reset the database")
+    @When("I reset the database")
     public void iResetTheDatabase() throws SQLException {
         backgroundTestRepository.reset();
     }

@@ -6,6 +6,7 @@ import repository.OrganisationRepository;
 import views.OrganisationView;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -43,7 +44,7 @@ public class OrganisationController {
         String organisationName = organisationView.getName();
         Organisation organisation = new Organisation(organisationName);
 
-        if (isValidated(organisation)) {
+        if (!isValidated(organisation)) {
             organisationView.displayNameError();
             return;
         }
@@ -64,15 +65,13 @@ public class OrganisationController {
      * @return organisationId int id for the organisation selected
      */
     public int selectOrganisation() {
-//        Connection connection = organisationRepository.databaseSetup();
-//        int organisationId;
-//        try {
-//            ArrayList<Organisation> organisationArrayList = organisationRepository.listAllOrganisations(connection);
-//            organisationId = organisationView.getOrganisationId(organisationArrayList);
-//            return organisationId;
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//        }
+        try {
+            ResultSet organisationSet = organisationRepository.getAll();
+            return organisationView.getOrganisationId(organisationSet);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        // return 0 to return user to main menu
         return 0;
     }
 }

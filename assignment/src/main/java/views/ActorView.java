@@ -3,6 +3,9 @@ package views;
 import models.Actor;
 import models.Organisation;
 
+import javax.sound.midi.Soundbank;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ActorView extends BaseView {
@@ -30,7 +33,6 @@ public class ActorView extends BaseView {
      * @return the user's level of trust that they submitted
      */
     public Double getLevelOfTrust() {
-        //TODO make enter actually skip
         System.out.println("Enter Level of trust press enter to skip: ");
         return getDoubleInput();
     }
@@ -40,9 +42,28 @@ public class ActorView extends BaseView {
      * @param actorArrayList
      * @return actor  id
      */
-    public int getActorId(ArrayList<Actor> actorArrayList) {
-        System.out.println("Select an actor enter id: ");
+    public int getActorId(ResultSet resultSet) throws SQLException {
+        System.out.println("Select an actor by entering id: ");
+        System.out.println("0: Back to menu");
+        while (resultSet.next()) {
+            System.out.println(String.format("%d: %s %s", resultSet.getInt("actor_id"), resultSet.getString("first_name"), resultSet.getString("last_name")));
+        }
         return getIntInput();
+    }
 
+    public boolean askIfHomonym(String firstName, String lastName) {
+        System.out.println("Is this you?");
+        System.out.println(firstName + lastName);
+        System.out.println("1: Yes\n" +
+                           "2: No");
+        return getIntInput() == 1;
+    }
+
+    public void displaySuccessMessage() {
+        super.displaySuccess("The actor was inserted");
+    }
+
+    public void displayNotHomonymMessage() {
+        super.displaySuccess("Duplicate insertion prevented");
     }
 }
