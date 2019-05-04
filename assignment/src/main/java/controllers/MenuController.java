@@ -2,8 +2,6 @@ package controllers;
 
 import views.MenuView;
 
-import javax.xml.bind.SchemaOutputResolver;
-
 public class MenuController {
 
     private MenuView menuView;

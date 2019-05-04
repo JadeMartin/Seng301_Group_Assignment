@@ -4,6 +4,8 @@ version := "0.1"
 
 scalaVersion := "2.12.8"
 
+trapExit := false
+
 libraryDependencies ++= Seq (
   "io.cucumber" % "cucumber-core" % "4.2.0" % " test " ,
   "io.cucumber" % "cucumber-jvm" % "4.2.0" % " test " ,

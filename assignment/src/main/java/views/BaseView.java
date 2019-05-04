@@ -18,6 +18,9 @@ public class BaseView {
         setScanner();
     }
 
+    /**
+     * Sets scanner to a new scanner
+     */
     public void setScanner() {
         scanner = new Scanner(System.in);
     }

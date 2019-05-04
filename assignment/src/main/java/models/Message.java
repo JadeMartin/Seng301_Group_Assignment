@@ -47,6 +47,6 @@ public class Message {
                 prefix = "";
         }
 
-        System.out.println(prefix + messageString);
+        System.out.println(prefix + messageString + "\n");
     }
 }
