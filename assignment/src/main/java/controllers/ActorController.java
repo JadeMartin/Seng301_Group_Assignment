@@ -1,14 +1,10 @@
 package controllers;
 
-import models.Organisation;
 import repository.ActorRepository;
 import views.ActorView;
 import models.Actor;
-
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class ActorController {
     ActorView actorView;

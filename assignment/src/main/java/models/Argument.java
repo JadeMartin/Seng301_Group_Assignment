@@ -6,6 +6,7 @@ package models;
 public class Argument {
     int argumentId;
     int discourseId;
+    int actorId;
     String rephrasing;
     int start;
     int end;
@@ -17,8 +18,9 @@ public class Argument {
      * @param start
      * @param end
      */
-    public Argument(int discourseId, String rephrasing, int start, int end) {
+    public Argument(int discourseId, int actorId, String rephrasing, int start, int end) {
         this.discourseId = discourseId;
+        this.actorId = actorId;
         this.rephrasing = rephrasing;
         this.start = start;
         this.end = end;
@@ -33,6 +35,10 @@ public class Argument {
         this.discourseId = discourseId;
     }
 
+    public void setActorId(int actorId) {
+        this.actorId = actorId;
+    }
+
     public void setStart(int start) {
         this.start = start;
     }
@@ -42,7 +48,11 @@ public class Argument {
     }
 
     //--- Getters ---
-    public int getdiscourseId() {
+    public int getActorId() {
+        return actorId;
+    }
+
+    public int getDiscourseId() {
         return discourseId;
     }
 
