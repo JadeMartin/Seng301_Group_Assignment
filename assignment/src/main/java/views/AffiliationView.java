@@ -1,5 +1,9 @@
 package views;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class AffiliationView extends BaseView {
 
     /**
@@ -7,7 +11,7 @@ public class AffiliationView extends BaseView {
      * @return the user's first name that they submitted
      */
     public String getRole() {
-        System.out.println("Enter First Name: ");
+        System.out.println("Enter Role Name: ");
         return getInput();
     }
 
@@ -15,18 +19,25 @@ public class AffiliationView extends BaseView {
      * Provides a user input for a user to submit the start date of the affiliation
      * @return the user's last name that they submitted
      */
-    public String getStartDate() {
-        System.out.println("Enter Start Date press enter to skip: ");
-        return getInput();
+    public Date getStartDate() throws ParseException {
+        System.out.println("Enter Start Date or press enter to skip: ");
+        return new SimpleDateFormat("dd/MM/yyyy").parse(getInput());
     }
 
     /**
      * Provides a user input for a user to submit the end date of the affiliation
      * @return the user's level of trust that they submitted
      */
-    public String getEndDate() {
-        //TODO make enter actually skip
-        System.out.println("Enter End Date press enter to skip: ");
-        return getInput();
+    public Date getEndDate() throws ParseException {
+        System.out.println("Enter End Date or press enter to skip: ");
+        return new SimpleDateFormat("dd/MM/yyyy").parse(getInput());
+    }
+
+    public void displaySuccessMessage() {
+        super.displaySuccess("Affiliation successfully inserted");
+    }
+
+    public void displayErrorMessage() {
+        super.displayError("Affiliation could not be inserted");
     }
 }

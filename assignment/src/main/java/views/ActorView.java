@@ -52,7 +52,7 @@ public class ActorView extends BaseView {
     }
 
     public boolean askIfHomonym(String firstName, String lastName) {
-        System.out.println("Is this you?");
+        super.displayConfirmation("Is this you?");
         System.out.println(firstName + lastName);
         System.out.println("1: Yes\n" +
                            "2: No");

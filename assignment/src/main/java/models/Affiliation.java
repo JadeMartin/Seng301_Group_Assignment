@@ -1,17 +1,22 @@
 package models;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
  * Model class for the affiliation entity
  */
 public class Affiliation {
-    int affiliationId;
-    int actorId;
-    int organisationId;
-    String role;
-    String startDate;
-    String endDate;
+    private int affiliationId;
+    private int actorId;
+    // Integer type to allow null values
+    private Integer organisationId;
+    private String role;
+    private Date startDate;
+    private Date endDate;
+    private DateFormat dateFormat;
 
     /**
      * Constructor for an Affiliation
@@ -21,12 +26,13 @@ public class Affiliation {
      * @param startDate
      * @param endDate
      */
-    public Affiliation(int actorId, int organisationId, String role, String startDate, String endDate) {
+    public Affiliation(int actorId, Integer organisationId, String role, Date startDate, Date endDate) {
         this.actorId = actorId;
         this.organisationId = organisationId;
         this.role = role;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     }
 
     //--- Setters ---
@@ -34,11 +40,11 @@ public class Affiliation {
         this.role = role;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
@@ -47,11 +53,11 @@ public class Affiliation {
         return role;
     }
 
-    public String getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
@@ -63,7 +69,15 @@ public class Affiliation {
         return actorId;
     }
 
-    public int getOrganisationId() {
+    public Integer getOrganisationId() {
         return organisationId;
+    }
+
+    public String getStartDateAsString() {
+        return dateFormat.format(startDate);
+    }
+
+    public String getEndDateAsString() {
+        return dateFormat.format((endDate));
     }
 }

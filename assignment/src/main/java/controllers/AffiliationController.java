@@ -6,7 +6,7 @@ import repository.AffiliationRepository;
 import views.AffiliationView;
 
 import java.sql.Connection;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.SQLException;
 
 /**
@@ -34,18 +34,24 @@ public class AffiliationController {
     public void insertAffiliation(int actorId, int organisationId) {
 
         String affiliationRole = affiliationView.getRole();
-        String affiliationStartDate = affiliationView.getStartDate();
-        String affiliationEndDate = affiliationView.getEndDate();
+        Date affiliationStartDate = null;
+        Date affiliationEndDate = null;
+        try {
+            affiliationStartDate = affiliationView.getStartDate();
+            affiliationEndDate = affiliationView.getEndDate();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
         Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
 
         // Try to insert organisation and display message based on success
-//        try {
-//            Connection connection = affiliationRepository.databaseSetup();
-//            affiliationRepository.insert(connection, affiliation);
-//            // organisationView.displaySuccessMessage();
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//        }
+        try {
+            affiliationRepository.insert(affiliation);
+            affiliationView.displaySuccessMessage();
+        } catch (SQLException e) {
+            affiliationView.displayErrorMessage();
+        }
     }
 }
 
