@@ -30,7 +30,8 @@ public class BaseView {
      * @return most recent user input
      */
     public String getInput() {
-        return scanner.nextLine();
+        String input = scanner.nextLine();
+        return input.equals("") ? null : input;
     }
 
     /**

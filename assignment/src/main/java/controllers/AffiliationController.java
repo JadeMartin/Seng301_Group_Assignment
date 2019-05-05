@@ -39,6 +39,8 @@ public class AffiliationController {
         try {
             affiliationStartDate = affiliationView.getStartDate();
             affiliationEndDate = affiliationView.getEndDate();
+            affiliationStartDate = null;
+            affiliationEndDate = null;
         } catch (Exception e) {
             System.out.println(e);
         }

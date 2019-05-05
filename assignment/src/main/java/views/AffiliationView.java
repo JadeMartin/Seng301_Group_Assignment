@@ -11,7 +11,7 @@ public class AffiliationView extends BaseView {
      * @return the user's first name that they submitted
      */
     public String getRole() {
-        System.out.println("Enter Role Name: ");
+        System.out.println("Enter Role Name or press enter to skip: ");
         return getInput();
     }
 
@@ -21,7 +21,8 @@ public class AffiliationView extends BaseView {
      */
     public Date getStartDate() throws ParseException {
         System.out.println("Enter Start Date or press enter to skip: ");
-        return new SimpleDateFormat("dd/MM/yyyy").parse(getInput());
+        String input = getInput();
+        return input == null ? null : new SimpleDateFormat("dd/MM/yyyy").parse(input);
     }
 
     /**
@@ -30,7 +31,8 @@ public class AffiliationView extends BaseView {
      */
     public Date getEndDate() throws ParseException {
         System.out.println("Enter End Date or press enter to skip: ");
-        return new SimpleDateFormat("dd/MM/yyyy").parse(getInput());
+        String input = getInput();
+        return input == null ? null : new SimpleDateFormat("dd/MM/yyyy").parse(input);
     }
 
     public void displaySuccessMessage() {
