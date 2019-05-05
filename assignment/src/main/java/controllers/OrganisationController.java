@@ -68,6 +68,7 @@ public class OrganisationController {
         try {
             ResultSet organisationSet = organisationRepository.getAll();
             return organisationView.getOrganisationId(organisationSet);
+
         } catch (SQLException e) {
             System.out.println(e);
         }

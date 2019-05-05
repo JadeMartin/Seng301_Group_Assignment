@@ -33,7 +33,17 @@ public class ActorController {
      */
     public void insertActor() {
         String actorFirstName = actorView.getFirstName();
+        if (actorFirstName == null) {
+            actorView.displayIncorrectInput();
+            return;
+        }
+
         String actorLastName = actorView.getLastName();
+        if (actorLastName == null) {
+            actorView.displayIncorrectInput();
+            return;
+        }
+
         Double actorLevelOfTrust = actorView.getLevelOfTrust();
         Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
 
@@ -62,7 +72,6 @@ public class ActorController {
         }
 
         return isHomonym;
-
     }
 
     /**
@@ -75,6 +84,7 @@ public class ActorController {
         try {
             ResultSet actorSet = actorRepository.getAll();
             return actorView.getActorId(actorSet);
+
         } catch (SQLException e) {
             System.out.println(e);
         }

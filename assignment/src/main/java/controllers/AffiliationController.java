@@ -40,7 +40,8 @@ public class AffiliationController {
             affiliationStartDate = affiliationView.getStartDate();
             affiliationEndDate = affiliationView.getEndDate();
         } catch (Exception e) {
-            System.out.println(e);
+            affiliationView.displayIncorrectInput();
+            return;
         }
         Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
 

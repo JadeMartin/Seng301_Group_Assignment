@@ -43,11 +43,19 @@ public class OrganisationView extends BaseView {
      * @return organisation id
      */
     public Integer getOrganisationId(ResultSet resultSet) throws SQLException {
-        System.out.println("Select an organisation by entering id: ");
+        System.out.println("Select an organisation by entering id or press enter to skip: ");
         System.out.println("0: Back to menu");
+        ArrayList<Integer> ids = new ArrayList<Integer>();
         while (resultSet.next()) {
+            ids.add(resultSet.getInt("organisation_id"));
             System.out.println(String.format("%d: %s", resultSet.getInt("organisation_id"), resultSet.getString("name")));
         }
-        return getIntInputOrNull();
+        int id =  getIntInputOrNull();
+        if (ids.contains(id)) {
+            return id;
+        } else {
+            displayOutOfBounds();
+            return 0;
+        }
     }
 }

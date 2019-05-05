@@ -22,34 +22,10 @@ public class AffiliationRepository extends BaseRepository {
                     statement.setInt(2, affiliation.getOrganisationId());
                 }
 
-//                if (affiliation.getRole() == null) {
-//                    statement.setNull(2, Types.V);
-//                } else {
-//                    statement.setInt(2, affiliation.getOrganisationId());
-//                }
-//
-//                if (affiliation.getStartDateAsString() == null) {
-//                    statement.setNull(2, Types.INTEGER);
-//                } else {
-//                    statement.setInt(2, affiliation.getOrganisationId());
-//                }
-//
-//                if (affiliation.getEndDateAsString() == null) {
-//                    statement.setNull(2, Types.INTEGER);
-//                } else {
-//                    statement.setInt(2, affiliation.getOrganisationId());
-//                }
-
-
-                System.out.println("did i get here?");
                 statement.setString(3, affiliation.getRole());
-                System.out.println("did i get here?");
                 statement.setString(4, affiliation.getStartDateAsString());
-                System.out.println("what about here?");
                 statement.setString(5, affiliation.getEndDateAsString());
-                System.out.println("here?");
                 statement.executeUpdate();
-                System.out.println("here2?");
                 statement.closeOnCompletion();
             }
             else {
