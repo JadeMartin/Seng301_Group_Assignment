@@ -60,8 +60,9 @@ public class MenuController {
 
         int actorId = actorController.selectActor();
         if (actorId != 0) {
-            int organisationId = organisationController.selectOrganisation();
-            if (organisationId != 0) {
+            Integer organisationId = organisationController.selectOrganisation();
+
+            if (organisationId == null || !organisationId.equals(0)) {
                 affiliationController.insertAffiliation(actorId, organisationId);
             }
         }

@@ -42,6 +42,11 @@ public class BaseView {
         return Integer.parseInt(scanner.nextLine());
     }
 
+    public Integer getIntInputOrNull() {
+        String input = scanner.nextLine();
+        return input.equals("") ? null : Integer.parseInt(input);
+    }
+
     public Double getDoubleInput() {
         String input = scanner.nextLine();
         return input.equals("") ? null : Double.parseDouble(input);

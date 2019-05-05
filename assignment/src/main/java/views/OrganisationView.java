@@ -42,12 +42,12 @@ public class OrganisationView extends BaseView {
      * @param organisationArrayList
      * @return organisation id
      */
-    public int getOrganisationId(ResultSet resultSet) throws SQLException {
+    public Integer getOrganisationId(ResultSet resultSet) throws SQLException {
         System.out.println("Select an organisation by entering id: ");
         System.out.println("0: Back to menu");
         while (resultSet.next()) {
             System.out.println(String.format("%d: %s", resultSet.getInt("organisation_id"), resultSet.getString("name")));
         }
-        return getIntInput();
+        return getIntInputOrNull();
     }
 }
