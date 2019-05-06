@@ -1,43 +1,44 @@
 package steps;
 
+import controllers.ActorController;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import models.Actor;
+import org.junit.Assert;
+import repository.ActorRepository;
+import repository.ActorTestRepository;
+
+import java.sql.SQLException;
 
 public class CreateActorSteps {
+    private Actor currentActor;
+    private ActorTestRepository actorTestRepository;
+    private ActorRepository actorRepository;
+
+    public CreateActorSteps() {
+        actorTestRepository = new ActorTestRepository();
+        actorRepository = new ActorRepository();
+    }
+
     @Given("I create an actor with the first name {string} and the last name {string}")
-    public void iCreateAnActorWithTheFirstNameAndTheLastName(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    public void iCreateAnActorWithTheFirstNameAndTheLastName(String firstName, String lastName) {
+        currentActor = new Actor(firstName, lastName, 0.0);
     }
 
     @When("I submit the actor")
-    public void iSubmitTheActor() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    public void iSubmitTheActor() throws SQLException{
+        actorRepository.insert(currentActor);
     }
 
     @Then("My actor should exist")
-    public void myActorShouldExist() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    public void myActorShouldExist() throws SQLException{
+        Assert.assertTrue(actorTestRepository.getAll().next());
     }
 
     @Then("My actor should not exist")
-    public void myActorShouldNotExist() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    public void myActorShouldNotExist() throws SQLException{
+        Assert.assertFalse(actorTestRepository.getAll().next());
     }
 
-    @When("I confirm that it is a new actor")
-    public void iConfirmThatItIsANewActor() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-    @When("I do not confirm that it is a new actor")
-    public void iDoNotConfirmThatItIsANewActor() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
 }

@@ -49,14 +49,18 @@ public class ActorController {
 
         // Try to insert actor and display message based on success
         try {
-            if (!checkIfHomonym(actor)) {
-                actorRepository.insert(actor);
-                actorView.displaySuccessMessage();
-            } else {
-                actorView.displayNotHomonymMessage();
-            }
+            insertIfNotHomonym(actor);
         } catch (SQLException e) {
             System.out.println(e);
+        }
+    }
+
+    public void insertIfNotHomonym(Actor actor) throws SQLException{
+        if (!checkIfHomonym(actor)) {
+            actorRepository.insert(actor);
+            actorView.displaySuccessMessage();
+        } else {
+            actorView.displayNotHomonymMessage();
         }
     }
 

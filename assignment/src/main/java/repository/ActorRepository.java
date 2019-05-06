@@ -10,20 +10,24 @@ import java.util.ArrayList;
 public class ActorRepository extends BaseRepository {
 
     public void insert(Actor actor) throws SQLException {
-        PreparedStatement statement = getConnection().prepareStatement("insert into actor (first_name, last_name, level_of_trust) values (?,?,?)");
-        // use indexes of wildcard ("?") starting from 1
-        statement.setString(1, actor.getFirstName());
-        statement.setString(2, actor.getLastName());
 
-        if (actor.getLevelOfTrust() == null) {
-            statement.setNull(3, Types.DOUBLE);
+        if (!actor.getFirstName().equals("") && !actor.getLastName().equals("")) {
+            PreparedStatement statement = getConnection().prepareStatement("insert into actor (first_name, last_name, level_of_trust) values (?,?,?)");
+            // use indexes of wildcard ("?") starting from 1
+            statement.setString(1, actor.getFirstName());
+            statement.setString(2, actor.getLastName());
+
+            if (actor.getLevelOfTrust() == null) {
+                statement.setNull(3, Types.DOUBLE);
+            } else {
+                statement.setDouble(3, actor.getLevelOfTrust());
+            }
+
+            statement.executeUpdate();
+            statement.closeOnCompletion();
         } else {
-            statement.setDouble(3, actor.getLevelOfTrust());
+            System.out.println("Could not insert");
         }
-
-        statement.executeUpdate();
-        statement.closeOnCompletion();
-
     }
 
     public ResultSet getAll() throws SQLException {

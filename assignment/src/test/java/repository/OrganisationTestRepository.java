@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class OrganisationTestRepository extends OrganisationRepository {
+public class OrganisationTestRepository extends BaseRepository {
     public ResultSet getByName(String name) throws SQLException {
         assert null != getConnection();
         PreparedStatement statement = getConnection().prepareStatement("select * from organisation where name = ?");

@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import models.Organisation;
 import org.junit.Assert;
+import repository.OrganisationRepository;
 import repository.OrganisationTestRepository;
 
 import java.sql.ResultSet;
@@ -16,6 +17,7 @@ import java.sql.SQLException;
 public class CreateOrganisationSteps {
 
     private OrganisationTestRepository organisationTestRepository;
+    private OrganisationRepository organisationRepository;
     private Organisation currentOrganisation;
     private boolean exceptionFlag;
 
@@ -24,6 +26,7 @@ public class CreateOrganisationSteps {
      */
     public CreateOrganisationSteps() {
         organisationTestRepository = new OrganisationTestRepository();
+        organisationRepository = new OrganisationRepository();
         exceptionFlag = false;
     }
 
@@ -42,7 +45,7 @@ public class CreateOrganisationSteps {
     @When("I submit the organisation")
     public void iSubmitTheOrganisation() {
         try {
-            organisationTestRepository.insert(currentOrganisation);
+            organisationRepository.insert(currentOrganisation);
         } catch (SQLException e) {
             exceptionFlag = true;
         }

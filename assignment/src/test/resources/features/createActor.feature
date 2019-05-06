@@ -21,16 +21,8 @@ Feature: Create Actor
     When I submit the actor
     Then My actor should not exist
 
-  Scenario: Create an actor twice and confirm new
+  Scenario: Create a homonym actor
     Given I create an actor with the first name "John" and the last name "Smith"
     When I submit the actor
     And I submit the actor
-    And I confirm that it is a new actor
     Then My actor should exist
-
-  Scenario: Create an actor twice and don't confirm new
-    Given I create an actor with the first name "John" and the last name "Smith"
-    When I submit the actor
-    And I submit the actor
-    And I do not confirm that it is a new actor
-    Then My actor should not exist
