@@ -15,6 +15,9 @@ public class BackgroundTestRepository extends BaseRepository {
         statement = getConnection().prepareStatement("DELETE FROM actor");
         statement.execute();
 
+        statement = getConnection().prepareStatement("DELETE FROM affiliation");
+        statement.execute();
+
         statement.closeOnCompletion();
     }
 }
