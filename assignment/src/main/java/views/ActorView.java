@@ -33,7 +33,6 @@ public class ActorView extends BaseView {
 
     /**
      * provide user input to select actor
-     * @param actorArrayList
      * @return actor  id
      */
     public int getActorId(ResultSet resultSet) throws SQLException {
@@ -51,11 +50,12 @@ public class ActorView extends BaseView {
             displayOutOfBounds();
             return 0;
         }
+
     }
 
     public boolean askIfHomonym(String firstName, String lastName) {
         super.displayConfirmation("Is this you?");
-        System.out.println(firstName + " " + lastName);
+        System.out.println(firstName + lastName);
         System.out.println("1: Yes\n" +
                            "2: No");
         return getIntInput() == 1;
