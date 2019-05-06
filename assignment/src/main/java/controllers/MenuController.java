@@ -88,7 +88,7 @@ public class MenuController {
             int sourceId = sourceController.selectSource();
             if (sourceId != 0) {
                 int discourseId = discourseController.selectDiscourse(sourceId);
-                if (sourceId != 0) {
+                if (discourseId != 0) {
                     //Links ??
                     if (option == 1) {
                         argumentController.insertArgument(actorId, discourseId);

@@ -39,16 +39,24 @@ public class ActorView extends BaseView {
 
     /**
      * provide user input to select actor
-     * @param actorArrayList
      * @return actor  id
      */
     public int getActorId(ResultSet resultSet) throws SQLException {
         System.out.println("Select an actor by entering id: ");
         System.out.println("0: Back to menu");
+        ArrayList<Integer> ids = new ArrayList<Integer>();
         while (resultSet.next()) {
+            ids.add(resultSet.getInt("actor_id"));
             System.out.println(String.format("%d: %s %s", resultSet.getInt("actor_id"), resultSet.getString("first_name"), resultSet.getString("last_name")));
         }
-        return getIntInput();
+        int id = getIntInput();
+        if (ids.contains(id)) {
+            return id;
+        } else {
+            displayOutOfBounds();
+            return 0;
+        }
+
     }
 
     public boolean askIfHomonym(String firstName, String lastName) {

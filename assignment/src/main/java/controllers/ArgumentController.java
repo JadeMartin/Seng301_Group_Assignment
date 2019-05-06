@@ -34,6 +34,10 @@ public class ArgumentController {
      */
     public void insertArgument(int actorId, int discourseId) {
         String argumentRephrasing = argumentView.getRephrasing();
+        if (argumentRephrasing == null) {
+            argumentView.displayIncorrectInput();
+        }
+
         int argumentStart = argumentView.getStart();
         int argumentEnd = argumentView.getEnd();
         Argument argument = new Argument(discourseId, actorId, argumentRephrasing, argumentStart, argumentEnd);
@@ -60,14 +64,28 @@ public class ArgumentController {
      * - display message depending on success or failure
      */
     public void insertArgumentLink() {
+        boolean boolLink = false;
+        int link = 0;
+        int argumentTwoId = 0;
         try {
             ResultSet arguments = argumentRepository.getAll();
             int argumentOneId = argumentView.displayArguments(arguments);
-            int argumentTwoId = argumentView.getArgumentTwo(argumentOneId);
-            Boolean link = argumentView.getArgumentLink();
-            ArgumentLink argumentLink = new ArgumentLink(argumentOneId, argumentTwoId, link);
-            argumentRepository.insertLink(argumentLink);
-            argumentView.displaySuccessMessage();
+            if (argumentOneId != 0) {
+                argumentTwoId = argumentView.getArgumentTwo(argumentOneId);
+                if (argumentTwoId != 0) {
+                    link = argumentView.getArgumentLink();
+                    if (link == 1) {
+                        boolLink = true;
+                    } else if (link == 2) {
+                        boolLink = false;
+                    }
+                }
+            }
+            if (link != 0) {
+                ArgumentLink argumentLink = new ArgumentLink(argumentOneId, argumentTwoId, boolLink);
+                argumentRepository.insertLink(argumentLink);
+                argumentView.displaySuccessMessage();
+            }
         } catch (SQLException e) {
             System.out.println(e);
         }
