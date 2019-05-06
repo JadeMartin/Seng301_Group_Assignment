@@ -18,7 +18,7 @@ public class ArgumentController {
     ArgumentRepository argumentRepository;
 
     /**
-     * Constructor
+     * Constructor for an argument also creates the argument view and repo
      */
     public ArgumentController() {
         argumentView = new ArgumentView();
@@ -51,6 +51,14 @@ public class ArgumentController {
         }
     }
 
+    /**
+     * Function to insert an argument link by:
+     * - Asking for the first argument id
+     * - Asking for the second argument id
+     * - Asking for the link type
+     * - inserting into the db
+     * - display message depending on success or failure
+     */
     public void insertArgumentLink() {
         try {
             ResultSet arguments = argumentRepository.getAll();

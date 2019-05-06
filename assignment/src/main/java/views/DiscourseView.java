@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class DiscourseView extends BaseView {
     /**
-     * provide user input to select source
+     * provide user input to select discourse
      * @return source id
      */
     public int getDiscourseId(ResultSet resultSet) throws SQLException {

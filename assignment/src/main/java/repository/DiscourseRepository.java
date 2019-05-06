@@ -16,15 +16,10 @@ public class DiscourseRepository extends BaseRepository{
      * @throws SQLException
      */
     public ResultSet getAllBySource(int sourceId) throws SQLException {
-        PreparedStatement statement = getConnection().prepareStatement("select * from discourse where sourceId = ?");
+        PreparedStatement statement = getConnection().prepareStatement("select * from discourse where source_id = ?");
         statement.setInt(1, sourceId);
         ResultSet resultSet = statement.executeQuery();
         statement.closeOnCompletion();
         return resultSet;
     }
-
-    public ResultSet getAll() throws SQLException {
-        return super.getAllByTableName("discourse");
-    }
-
 }

@@ -11,7 +11,7 @@ public class SourceController {
     SourceRepository sourceRepository;
 
     /**
-     * Constructor
+     * Constructor to construct a source including a view and repo for that source
      */
     public SourceController() {
         sourceView = new SourceView();

@@ -47,27 +47,42 @@ public class ArgumentView extends BaseView {
 
     // Argument Link view
 
+    /**
+     * Display arguments so an argument can be selected via user input
+     * @param arguments
+     * @return int argument id for selected argument
+     * @throws SQLException
+     */
     public int displayArguments(ResultSet arguments) throws SQLException {
-        while (arguments.next()) {
-            System.out.println(String.format("%d: %s %d %d %d", arguments.getInt("argumentId"), arguments.getString("rephrasing"), arguments.getInt("start"), arguments.getInt("end")));
-        }
         System.out.println("Select an argument by entering id: ");
         System.out.println("0: Back to menu");
+        while (arguments.next()) {
+            System.out.println(String.format("%d: %s %d %d ", arguments.getInt("argument_id"), arguments.getString("rephrasing"), arguments.getInt("start"), arguments.getInt("end")));
+        }
         return getIntInput();
     }
 
 
+    /**
+     * Get second argument to create an argument link
+     * @param argumentOneId
+     * @return int argument id for selected argument
+     */
     public int getArgumentTwo(int argumentOneId) {
         // TODO check for duplicate entry ie argumentOneID
         System.out.println("Select another argument by entering another id: ");
-        System.out.println("0: Back to menu");
         return getIntInput();
     }
 
+    /**
+     * provide user input to create an argument link
+     * @return boolean of the inputed link type either true for for or false for against
+     */
     public Boolean getArgumentLink() {
         //check for 0 to go back to menu
-        System.out.println("Select an argument link 1 for true 2 for false: ");
-        System.out.println("0: Back to menu");
+        System.out.println("Press 1 to create a for link type. \n" +
+                "Press 2 to create an against link type\n" +
+                "Press 0 to end program. \n");
         if (getIntInput() == 1) {
             return true;
         } else {

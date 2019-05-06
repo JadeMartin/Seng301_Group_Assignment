@@ -11,7 +11,7 @@ public class DiscourseController {
     DiscourseRepository discourseRepository;
 
     /**
-     * Constructor
+     * Constructor for a discourse also initializing a view and repo for that discourse
      */
     public DiscourseController() {
         discourseView = new DiscourseView();

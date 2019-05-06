@@ -18,7 +18,7 @@ public class ArgumentRepository extends BaseRepository {
     public void insert(Argument argument) throws SQLException {
         //TODO check for valid input not null
         if (null != getConnection() && !argument.getRephrasing().equals("")) {
-            PreparedStatement statement = getConnection().prepareStatement("insert into argument(discource_id, actor_id, rephrasing, start, end) values (?,?,?,?,?)");
+            PreparedStatement statement = getConnection().prepareStatement("insert into argument(discourse_id, actor_id, rephrasing, start, end) values (?,?,?,?,?)");
             // use indexes of wildcard ("?") starting from 1
             statement.setInt(1, argument.getDiscourseId());
             statement.setInt(2, argument.getActorId());
@@ -33,6 +33,10 @@ public class ArgumentRepository extends BaseRepository {
         }
     }
 
+    /**
+     * function to insert a argument link between two arguments
+     * @throws SQLException
+     */
     public void insertLink(ArgumentLink argumentLink) throws SQLException {
         //TODO check for valid input not null
         if (null != getConnection()) {
@@ -57,7 +61,7 @@ public class ArgumentRepository extends BaseRepository {
      * @return boolean true for duplicate false for non duplicate entry
      */
     public boolean checkDuplicate(int discourseId, int argumentStart, int argumentEnd) throws SQLException {
-        PreparedStatement statement = getConnection().prepareStatement("select * from argument where discourseId = ? and argumentStart = ? and argumentEnd = ?");
+        PreparedStatement statement = getConnection().prepareStatement("select * from argument where discourse_id = ? and start = ? and end = ?");
         statement.setInt(1, discourseId);
         statement.setInt(2, argumentStart);
         statement.setInt(3, argumentEnd);
@@ -69,6 +73,11 @@ public class ArgumentRepository extends BaseRepository {
         return true;
     }
 
+    /**
+     * Get all arguments in the database
+     * @return
+     * @throws SQLException
+     */
     public ResultSet getAll() throws SQLException {
         return super.getAllByTableName("argument");
     }
