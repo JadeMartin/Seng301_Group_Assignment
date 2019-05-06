@@ -73,10 +73,24 @@ public class MenuController {
 
     private void affiliationInsertHandler() {
 
-        int actorId = actorController.selectActor();
+        int actorId;
+        Integer organisationId; //Integer instead of int for possible null value
+        try {
+            actorId = actorController.selectActor();
+        } catch (Exception e) {
+            menuView.displayIncorrectInput();
+            return;
+        }
+
         if (actorId != 0) {
-            int organisationId = organisationController.selectOrganisation();
-            if (organisationId != 0) {
+            try {
+                organisationId = organisationController.selectOrganisation();
+            } catch (Exception e) {
+                menuView.displayIncorrectInput();
+                return;
+            }
+
+            if (organisationId == null || !organisationId.equals(0)) {
                 affiliationController.insertAffiliation(actorId, organisationId);
             }
         }

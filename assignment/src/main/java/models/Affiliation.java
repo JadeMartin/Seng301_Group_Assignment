@@ -74,10 +74,10 @@ public class Affiliation {
     }
 
     public String getStartDateAsString() {
-        return dateFormat.format(startDate);
+        return startDate == null ? null : dateFormat.format(startDate);
     }
 
     public String getEndDateAsString() {
-        return dateFormat.format((endDate));
+        return endDate == null ? null : dateFormat.format((endDate));
     }
 }

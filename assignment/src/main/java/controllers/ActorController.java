@@ -29,20 +29,34 @@ public class ActorController {
      */
     public void insertActor() {
         String actorFirstName = actorView.getFirstName();
+        if (actorFirstName == null) {
+            actorView.displayIncorrectInput();
+            return;
+        }
+
         String actorLastName = actorView.getLastName();
+        if (actorLastName == null) {
+            actorView.displayIncorrectInput();
+            return;
+        }
+
         Double actorLevelOfTrust = actorView.getLevelOfTrust();
         Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
 
         // Try to insert actor and display message based on success
         try {
-            if (!checkIfHomonym(actor)) {
-                actorRepository.insert(actor);
-                actorView.displaySuccessMessage();
-            } else {
-                actorView.displayNotHomonymMessage();
-            }
+            insertIfNotHomonym(actor);
         } catch (SQLException e) {
             System.out.println(e);
+        }
+    }
+
+    public void insertIfNotHomonym(Actor actor) throws SQLException{
+        if (!checkIfHomonym(actor)) {
+            actorRepository.insert(actor);
+            actorView.displaySuccessMessage();
+        } else {
+            actorView.displayNotHomonymMessage();
         }
     }
 
@@ -58,7 +72,6 @@ public class ActorController {
         }
 
         return isHomonym;
-
     }
 
     /**
@@ -71,6 +84,7 @@ public class ActorController {
         try {
             ResultSet actorSet = actorRepository.getAll();
             return actorView.getActorId(actorSet);
+
         } catch (SQLException e) {
             System.out.println(e);
         }

@@ -64,10 +64,11 @@ public class OrganisationController {
      * outputing them and asking for a selection which is the organisations id
      * @return organisationId int id for the organisation selected
      */
-    public int selectOrganisation() {
+    public Integer selectOrganisation() {
         try {
             ResultSet organisationSet = organisationRepository.getAll();
             return organisationView.getOrganisationId(organisationSet);
+
         } catch (SQLException e) {
             System.out.println(e);
         }

@@ -31,22 +31,4 @@ public class OrganisationRepository extends BaseRepository{
     public ResultSet getAll() throws SQLException {
         return super.getAllByTableName("Organisation");
     }
-
-
-
-//    /**
-//     * List all organisations in the database
-//     * @param connection
-//     * @return ArrayList of all organisations added in the database
-//     * @throws SQLException
-//     */
-//    public ArrayList<Organisation> listAllOrganisations(Connection connection) throws SQLException {
-//        ArrayList<Organisation> organisationArrayList = new ArrayList<>();
-//        if(true) {
-//            System.out.println(connection);
-//        } else {
-//            System.out.println("Failed to get any organisations");
-//        }
-//        return organisationArrayList;
-//    }
 }
