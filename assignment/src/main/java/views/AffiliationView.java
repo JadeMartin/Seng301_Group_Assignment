@@ -42,4 +42,6 @@ public class AffiliationView extends BaseView {
     public void displayErrorMessage() {
         super.displayError("Affiliation could not be inserted");
     }
+
+    public void displayIncorrectDateOrder() { super.displayError("Start date is not before end date"); }
 }

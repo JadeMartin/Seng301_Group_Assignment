@@ -28,14 +28,8 @@ public class ActorView extends BaseView {
         return getInput();
     }
 
-    /**
-     * Provides a user input for a user to submit their level of trust
-     * @return the user's level of trust that they submitted
-     */
-    public Double getLevelOfTrust() {
-        System.out.println("Enter Level of trust press enter to skip: ");
-        return getDoubleInput();
-    }
+
+    public String va
 
     /**
      * provide user input to select actor

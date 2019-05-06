@@ -76,7 +76,7 @@ public class MenuController {
             }
 
             if (organisationId == null || !organisationId.equals(0)) {
-                affiliationController.insertAffiliation(actorId, organisationId);
+                affiliationController.insertAffiliationHandler(actorId, organisationId);
             }
         }
     }

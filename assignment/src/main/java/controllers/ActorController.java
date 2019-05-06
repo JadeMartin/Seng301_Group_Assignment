@@ -32,20 +32,26 @@ public class ActorController {
      *   otherwise display success message
      */
     public void insertActor() {
+        // Get and validate first name
         String actorFirstName = actorView.getFirstName();
-        if (actorFirstName == null) {
+        try {
+            actorView.validateFirstName(actorFirstName);
+        } catch (Exception e) {
             actorView.displayIncorrectInput();
             return;
         }
 
+        // Get and validate last name
         String actorLastName = actorView.getLastName();
-        if (actorLastName == null) {
+        try {
+            actorView.validateLastName(actorLastName)
+        } catch (Exception e) {
             actorView.displayIncorrectInput();
             return;
         }
 
-        Double actorLevelOfTrust = actorView.getLevelOfTrust();
-        Actor actor = new Actor(actorFirstName, actorLastName, actorLevelOfTrust);
+
+        Actor actor = new Actor(actorFirstName, actorLastName);
 
         // Try to insert actor and display message based on success
         try {
@@ -56,7 +62,7 @@ public class ActorController {
     }
 
     public void insertIfNotHomonym(Actor actor) throws SQLException{
-        if (!checkIfHomonym(actor)) {
+        if (!askIfHomonym(actor)) {
             actorRepository.insert(actor);
             actorView.displaySuccessMessage();
         } else {
@@ -64,7 +70,7 @@ public class ActorController {
         }
     }
 
-    private boolean checkIfHomonym(Actor actor) throws SQLException {
+    private boolean askIfHomonym(Actor actor) throws SQLException {
         //TODO: Display affiliations
         boolean isHomonym = false;
         ResultSet actorSet = actorRepository.getAllByFirstAndLast(actor.getFirstName(), actor.getLastName());

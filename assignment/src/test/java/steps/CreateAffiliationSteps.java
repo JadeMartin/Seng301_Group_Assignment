@@ -39,8 +39,8 @@ public class CreateAffiliationSteps {
 
     @When("I submit the affiliation")
     public void iSubmitTheAffiliation() throws SQLException{
-        AffiliationRepository affiliationRepository = new AffiliationRepository();
-        affiliationRepository.insert(currentAffiliation);
+        AffiliationController affiliationController = new AffiliationController();
+        affiliationController.insertAffiliation(currentAffiliation);
     }
 
     @Then("My affiliation should exist")

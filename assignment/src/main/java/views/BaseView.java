@@ -52,6 +52,10 @@ public class BaseView {
         return input.equals("") ? null : Double.parseDouble(input);
     }
 
+    public void validateNotNullString() throws {
+
+    }
+
     /**
      * Displays a message with the type set to error
      * @param messageString The string to add to the message

@@ -24,6 +24,22 @@ public class AffiliationController {
         affiliationRepository = new AffiliationRepository();
     }
 
+    public void insertAffiliationHandler(int actorId, Integer organisationId) {
+        String affiliationRole = affiliationView.getRole();
+        Date affiliationStartDate = null;
+        Date affiliationEndDate = null;
+        try {
+            affiliationStartDate = affiliationView.getStartDate();
+            affiliationEndDate = affiliationView.getEndDate();
+
+        } catch (Exception e) {
+            affiliationView.displayIncorrectInput();
+            return;
+        }
+        Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
+        insertAffiliation(affiliation);
+    }
+
     /**
      * Inserts an organisation by:
      * - Asking for the organisation name
@@ -31,20 +47,12 @@ public class AffiliationController {
      * - If there is a duplicate entry: display error message and do not insert
      *   otherwise display success message
      */
-    public void insertAffiliation(int actorId, Integer organisationId) {
+    public void insertAffiliation(Affiliation affiliation) {
 
-        String affiliationRole = affiliationView.getRole();
-        Date affiliationStartDate = null;
-        Date affiliationEndDate = null;
-        try {
-            affiliationStartDate = affiliationView.getStartDate();
-            affiliationEndDate = affiliationView.getEndDate();
-        } catch (Exception e) {
-            affiliationView.displayIncorrectInput();
+        if (!affiliation.getStartDate().before(affiliation.getEndDate())) {
+            affiliationView.displayIncorrectDateOrder();
             return;
         }
-        Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
-
         // Try to insert organisation and display message based on success
         try {
             affiliationRepository.insert(affiliation);

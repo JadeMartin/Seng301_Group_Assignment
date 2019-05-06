@@ -14,12 +14,11 @@ public class Actor{
      * Constructor for an Actor Entity
      * @param firstName
      * @param lastName
-     * @param levelOfTrust
      */
-    public Actor(String firstName, String lastName, Double levelOfTrust) {
+    public Actor(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.levelOfTrust = levelOfTrust;
+        this.levelOfTrust = 0.0;
     }
 
     //--- Setters ---
