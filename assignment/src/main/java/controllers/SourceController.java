@@ -19,7 +19,7 @@ public class SourceController {
     }
 
     /**
-     * Select an souce by:
+     * Select an source by:
      * Getting a list of source
      * output them and asking for a selection which is the source id
      * @return sourceId int id for the source selected

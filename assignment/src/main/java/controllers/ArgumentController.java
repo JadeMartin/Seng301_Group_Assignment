@@ -52,13 +52,12 @@ public class ArgumentController {
     }
 
     public void insertArgumentLink() {
-        ResultSet arguments = argumentRepository.getAll();
-        argumentView.displayArguments(arguments);
-        Argument argumentOne = argumentView.getArgumentOne();
-        Argument argumentTwo = argumentView.getArgumentTwo(argumentOne);
-        Boolean link = argumentView.getArgumentLink();
-        ArgumentLink argumentLink = new ArgumentLink(argumentOne, argumentTwo, link);
         try {
+            ResultSet arguments = argumentRepository.getAll();
+            int argumentOneId = argumentView.displayArguments(arguments);
+            int argumentTwoId = argumentView.getArgumentTwo(argumentOneId);
+            Boolean link = argumentView.getArgumentLink();
+            ArgumentLink argumentLink = new ArgumentLink(argumentOneId, argumentTwoId, link);
             argumentRepository.insertLink(argumentLink);
             argumentView.displaySuccessMessage();
         } catch (SQLException e) {

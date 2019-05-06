@@ -38,8 +38,8 @@ public class ArgumentRepository extends BaseRepository {
         if (null != getConnection()) {
             PreparedStatement statement = getConnection().prepareStatement("insert into argument_link(argument_one_id, argument_two_id, argument_link_type) values (?,?,?)");
             // use indexes of wildcard ("?") starting from 1
-            statement.setInt(1, argumentLink.getArgumentOne().getArgumentId());
-            statement.setInt(2, argumentLink.getArgumentTwo().getArgumentId());
+            statement.setInt(1, argumentLink.getArgumentOne());
+            statement.setInt(2, argumentLink.getArgumentTwo());
             statement.setBoolean(3, argumentLink.getArgumentLinkType());
             statement.executeUpdate();
             statement.closeOnCompletion();

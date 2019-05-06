@@ -1,5 +1,10 @@
 package views;
 
+import models.Argument;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class ArgumentView extends BaseView {
 
     /**
@@ -36,4 +41,38 @@ public class ArgumentView extends BaseView {
     public void displaySuccessMessage() {
         super.displaySuccess("The argument was inserted");
     }
+
+
+
+
+    // Argument Link view
+
+    public int displayArguments(ResultSet arguments) throws SQLException {
+        while (arguments.next()) {
+            System.out.println(String.format("%d: %s %d %d %d", arguments.getInt("argumentId"), arguments.getString("rephrasing"), arguments.getInt("start"), arguments.getInt("end")));
+        }
+        System.out.println("Select an argument by entering id: ");
+        System.out.println("0: Back to menu");
+        return getIntInput();
+    }
+
+
+    public int getArgumentTwo(int argumentOneId) {
+        // TODO check for duplicate entry ie argumentOneID
+        System.out.println("Select another argument by entering another id: ");
+        System.out.println("0: Back to menu");
+        return getIntInput();
+    }
+
+    public Boolean getArgumentLink() {
+        //check for 0 to go back to menu
+        System.out.println("Select an argument link 1 for true 2 for false: ");
+        System.out.println("0: Back to menu");
+        if (getIntInput() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

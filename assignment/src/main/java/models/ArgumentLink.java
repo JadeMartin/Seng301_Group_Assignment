@@ -1,24 +1,24 @@
 package models;
 
 public class ArgumentLink {
-    Argument argumentOne;
-    Argument argumentTwo;
+    int argumentOne;
+    int argumentTwo;
     boolean argumentLinkType;
     /**
      * Constructor for an Argument link Entity
      */
-    public ArgumentLink(Argument argumentOne, Argument argumentTwo, boolean argumentLinkType) {
+    public ArgumentLink(int argumentOne, int argumentTwo, boolean argumentLinkType) {
         this.argumentOne = argumentOne;
         this.argumentTwo = argumentTwo;
         this.argumentLinkType = argumentLinkType;
     }
 
     //--- Setters ---
-    public void setArgumentOne(Argument argumentOne) {
+    public void setArgumentOne(int argumentOne) {
         this.argumentOne = argumentOne;
     }
 
-    public void setArgumentTwoArgumentTwo(Argument argumentTwo) {
+    public void setArgumentTwoArgumentTwo(int argumentTwo) {
         this.argumentTwo = argumentTwo;
     }
 
@@ -28,11 +28,11 @@ public class ArgumentLink {
 
 
     //--- Getters ---
-    public Argument getArgumentOne() {
+    public int getArgumentOne() {
         return argumentOne;
     }
 
-    public Argument getArgumentTwo() {
+    public int getArgumentTwo() {
         return argumentTwo;
     }
 
