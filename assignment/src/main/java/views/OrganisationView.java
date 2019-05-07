@@ -45,7 +45,7 @@ public class OrganisationView extends BaseView {
     }
 
     public Integer convertToOrgOption(String organisationIdString) throws SQLException {
-        System.out.println(organisationIdString);
+
         if (organisationIdString == null || organisationIdString.equals("")) {
             return null;
         }

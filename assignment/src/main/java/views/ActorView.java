@@ -56,7 +56,7 @@ public class ActorView extends BaseView {
 
     public String askIfHomonym(String firstName, String lastName) {
         super.displayConfirmation("Would you like to insert homonym actor?");
-        System.out.println(firstName + lastName);
+        System.out.println(firstName + " " + lastName);
         System.out.println("1: Yes\n" +
                            "2: No");
         return getInput();

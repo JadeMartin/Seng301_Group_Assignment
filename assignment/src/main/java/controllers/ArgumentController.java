@@ -34,8 +34,11 @@ public class ArgumentController {
      */
     public void insertArgument(int actorId, int discourseId) {
         String argumentRephrasing = argumentView.getRephrasing();
-        if (argumentRephrasing == null) {
+        try {
+            argumentView.validateNotNullString(argumentRephrasing);
+        } catch (Exception e) {
             argumentView.displayIncorrectInput();
+            return;
         }
 
         String argumentStart = argumentView.getStart();
@@ -54,11 +57,7 @@ public class ArgumentController {
         int end;
         try {
             end = argumentView.convertTo(argumentEnd);
-            if (end <= start) {
-                //TODO change message to end needs to be after start
-                argumentView.displayIncorrectInput();
-                return;
-            }
+            argumentView.validateIndexOrder(start, end);
         } catch (Exception e) {
             argumentView.displayIncorrectInput();
             return;

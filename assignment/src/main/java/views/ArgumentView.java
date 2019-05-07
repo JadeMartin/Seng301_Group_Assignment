@@ -2,6 +2,7 @@ package views;
 
 import models.Argument;
 
+import javax.swing.text.html.HTMLDocument;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -34,6 +35,12 @@ public class ArgumentView extends BaseView {
     public String getEnd() {
         System.out.println("Enter the end index from the discourse: ");
         return getInput();
+    }
+
+    public void validateIndexOrder(int start, int end) {
+        if (start >= end) {
+            throw new RuntimeException();
+        }
     }
 
     public void displayDuplicateArgument() {
@@ -92,8 +99,7 @@ public class ArgumentView extends BaseView {
     public int convertTo(String argumentStart) {
         int argumentIndex = Integer.parseInt(argumentStart);
         if(argumentIndex < 0) {
-            displayOutOfBounds();
-            return -1;
+            throw new RuntimeException();
         }
         return argumentIndex;
     }
