@@ -1,15 +1,8 @@
 package views;
 
-import models.Actor;
-import models.Organisation;
-import org.omg.SendingContext.RunTime;
-
-import javax.sound.midi.Soundbank;
-import javax.xml.transform.Result;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
+
 
 public class ActorView extends BaseView {
 
@@ -31,7 +24,9 @@ public class ActorView extends BaseView {
         return getInput();
     }
 
-    //Todo: Junit
+    /**
+     * Function to convert an homonym input returning true for 1 or false for 2
+     */
     public boolean convertHomonymInput(String homonymInput) throws RuntimeException {
         if (homonymInput.equals("1")) {
             return true;
@@ -57,7 +52,12 @@ public class ActorView extends BaseView {
         return getInput();
     }
 
-    public String askIfHomonym(String firstName, String lastName, ResultSet resultSet) throws SQLException {
+    /**
+     * Function to ask whether the actor is already existing
+     * first out puts actor and their affiliation
+     * then asks user whether it is the same actor or a new one with the same name
+     */
+    public void askIfHomonym(String firstName, String lastName, ResultSet resultSet) throws SQLException {
         System.out.println("Actor: " + firstName +" "+ lastName + " is currently affiliated with:");
         int count = 1;
         while (resultSet.next()) {
@@ -67,11 +67,15 @@ public class ActorView extends BaseView {
         if (count == 1){
             System.out.println("No Organisations");
         }
+    }
+
+    public String getHomonym(String firstName, String lastName) {
         super.displayConfirmation("Would you like to insert the homonym actor?");
         System.out.println(firstName +" "+ lastName);
         System.out.println("1: Yes\n" +
-                           "2: No");
+                "2: No");
         return getInput();
+
     }
 
     public void displaySuccessMessage() {

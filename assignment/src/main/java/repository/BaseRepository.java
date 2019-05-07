@@ -21,6 +21,10 @@ public class BaseRepository {
         }
     }
 
+    /**
+     * Get all items in a given table
+     * takes a string input of a table name
+     */
     public ResultSet getAllByTableName(String tableName) throws SQLException {
         assert null != connection;
         PreparedStatement statement = getConnection().prepareStatement("select * from " + tableName);
@@ -29,6 +33,9 @@ public class BaseRepository {
         return resultSet;
     }
 
+    /**
+     * Function to return the connection to the database
+     */
     public Connection getConnection() {
         return connection;
     }

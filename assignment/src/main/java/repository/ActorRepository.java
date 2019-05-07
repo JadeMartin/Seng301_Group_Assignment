@@ -1,14 +1,17 @@
 package repository;
 
 import models.Actor;
-import models.Organisation;
-
-
 import java.sql.*;
-import java.util.ArrayList;
 
+
+/**
+ * Provides an interface with the database
+ */
 public class ActorRepository extends BaseRepository {
 
+    /**
+     * Insert an actor into the database
+     */
     public void insert(Actor actor) throws SQLException {
         if (!actor.getFirstName().equals("") && !actor.getLastName().equals("")) {
             PreparedStatement statement = getConnection().prepareStatement("insert into actor (first_name, last_name, level_of_trust) values (?,?,?)");
@@ -29,10 +32,16 @@ public class ActorRepository extends BaseRepository {
         }
     }
 
+    /**
+     * Retrieve all actors stored in database
+     */
     public ResultSet getAll() throws SQLException {
         return super.getAllByTableName("actor");
     }
 
+    /**
+     * Retrieve all actors from a given first and last name
+     */
     public ResultSet getAllByFirstAndLast(String firstName, String lastName) throws SQLException {
         PreparedStatement statement = getConnection().prepareStatement("select * from actor where first_name = ? and last_name = ?");
         statement.setString(1, firstName);
@@ -43,6 +52,9 @@ public class ActorRepository extends BaseRepository {
     }
 
 
+    /**
+     * Update an actors level of trust calculated from all of their arguments backings and contradictions
+     */
     public void updateLevelOfTrust(int actorId, Double level_of_trust) throws SQLException {
         if (null != getConnection()) {
             PreparedStatement updateStatement = getConnection().prepareStatement("update actor "
@@ -57,6 +69,10 @@ public class ActorRepository extends BaseRepository {
         }
     }
 
+    /**
+     * Retrieved from the database Lot = level of trust of an actor of a given actor id
+     * Lot = Level of trust
+     */
     public double getLot(int actorId) throws SQLException {
         PreparedStatement statement = getConnection().prepareStatement("select level_of_trust from actor where actor_id = ? ");
         statement.setInt(1, actorId);
@@ -64,23 +80,4 @@ public class ActorRepository extends BaseRepository {
         statement.closeOnCompletion();
         return resultSet.getDouble("level_of_trust");
     }
-
-
-
-//    /**
-//     * List all Actors in the database
-//     * @param connection
-//     * @return ArrayList of all actors added in the database
-//     * @throws SQLException
-//     */
-//    public ArrayList<Actor> listAllActors(Connection connection) throws SQLException {
-//        ArrayList<Actor> actorArrayList = new ArrayList<>();
-//        if(true) {
-//            System.out.println(connection);
-//        } else {
-//            System.out.println("Failed to get any organisations");
-//        }
-//        return actorArrayList;
-//    }
-    }
-
+}

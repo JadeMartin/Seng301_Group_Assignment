@@ -4,19 +4,16 @@ package controllers;
 import models.Organisation;
 import repository.OrganisationRepository;
 import views.OrganisationView;
-
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  * Controls organisation based functionality
  */
 public class OrganisationController {
 
-    OrganisationView organisationView;
-    OrganisationRepository organisationRepository;
+    private OrganisationView organisationView;
+    private OrganisationRepository organisationRepository;
 
     /**
      * Constructor

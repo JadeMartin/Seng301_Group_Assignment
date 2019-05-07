@@ -2,7 +2,6 @@ package models;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -20,11 +19,6 @@ public class Affiliation {
 
     /**
      * Constructor for an Affiliation
-     * @param actorId
-     * @param organisationId
-     * @param role
-     * @param startDate
-     * @param endDate
      */
     public Affiliation(int actorId, Integer organisationId, String role, Date startDate, Date endDate) {
         this.actorId = actorId;
