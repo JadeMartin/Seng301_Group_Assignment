@@ -59,7 +59,6 @@ public class ArgumentController {
         try {
             end = argumentView.convertTo(argumentEnd);
             if (end <= start) {
-                //TODO change message to end needs to be after start
                 argumentView.displayIncorrectEnd();
                 return;
             }

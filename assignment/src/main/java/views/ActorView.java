@@ -5,8 +5,10 @@ import models.Organisation;
 import org.omg.SendingContext.RunTime;
 
 import javax.sound.midi.Soundbank;
+import javax.xml.transform.Result;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class ActorView extends BaseView {
@@ -54,9 +56,18 @@ public class ActorView extends BaseView {
         return getInput();
     }
 
-    public String askIfHomonym(String firstName, String lastName) {
+    public String askIfHomonym(String firstName, String lastName, ResultSet resultSet) throws SQLException {
+        System.out.println("Actor: " + firstName +" "+ lastName + " is currently affiliated with:");
+        int count = 1;
+        while (resultSet.next()) {
+            System.out.println(String.format("%d) Role: %s\n   Start Date: %s\n   End Date: %s\n   Organisation Id: %d", count, resultSet.getString("role"), resultSet.getString("start_date"), resultSet.getString("end_date"), resultSet.getInt("organisation_id")));
+            count++;
+        }
+        if (count == 1){
+            System.out.println("No Organisations");
+        }
         super.displayConfirmation("Would you like to insert the homonym actor?");
-        System.out.println(firstName + lastName);
+        System.out.println(firstName +" "+ lastName);
         System.out.println("1: Yes\n" +
                            "2: No");
         return getInput();

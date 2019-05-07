@@ -20,7 +20,7 @@ public class AffiliationView extends BaseView {
      * @return the user's last name that they submitted
      */
     public String getStartDate() {
-        System.out.println("Enter Start Date or press enter to skip: ");
+        System.out.println("Enter Start Date with format DD/MM/YYYY or press enter to skip: ");
         return getInput();
     }
 
@@ -29,7 +29,7 @@ public class AffiliationView extends BaseView {
      * @return the user's level of trust that they submitted
      */
     public String getEndDate() {
-        System.out.println("Enter End Date or press enter to skip: ");
+        System.out.println("Enter End Date with format DD/MM/YYYY or press enter to skip: ");
         return getInput();
     }
 

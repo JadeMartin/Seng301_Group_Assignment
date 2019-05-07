@@ -1,6 +1,8 @@
 package controllers;
 
+import models.Affiliation;
 import repository.ActorRepository;
+import repository.AffiliationRepository;
 import views.ActorView;
 import models.Actor;
 import java.sql.ResultSet;
@@ -9,6 +11,7 @@ import java.sql.SQLException;
 public class ActorController {
     ActorView actorView;
     ActorRepository actorRepository;
+    AffiliationRepository affiliationRepository;
 
     /**
      * Constructor
@@ -16,6 +19,7 @@ public class ActorController {
     public ActorController() {
         actorView = new ActorView();
         actorRepository = new ActorRepository();
+        affiliationRepository = new AffiliationRepository();
     }
 
     /**
@@ -72,10 +76,12 @@ public class ActorController {
 
         while(actorSet.next()) {
             // Get and validate whether the actor is the same
-            String homonymInput = actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"));
+            ResultSet affiliationSet = affiliationRepository.getAffiliations(actorSet.getInt("actor_id"));
+            String homonymInput = actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"), affiliationSet);
             isHomonym = actorView.convertHomonymInput(homonymInput);
 
             if (isHomonym) {
+
                 return true;
             }
         }
