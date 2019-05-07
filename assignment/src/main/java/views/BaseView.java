@@ -72,8 +72,6 @@ public class BaseView {
             return input;
         }
         while (resultSet.next()) {
-            System.out.println(resultSet.getInt(colName));
-            System.out.println(input);
             if (resultSet.getInt(colName) == input) {
                 return input;
             }

@@ -96,10 +96,9 @@ public class ActorController {
             return actorView.convertToOption(actorIdString, "actor", "actor_id");
 
         } catch (SQLException e) {
-            System.out.println(e);
+            actorView.displayIncorrectInput();
+            return 0;
         }
-        // return 0 to return user to main menu
-        return 0;
     }
 }
 
