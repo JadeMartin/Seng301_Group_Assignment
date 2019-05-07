@@ -3,6 +3,7 @@ package views;
 import models.Message;
 import repository.BaseRepository;
 
+import java.io.ByteArrayInputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -21,6 +22,12 @@ public class BaseView {
     public BaseView() {
         setScanner();
         baseRepository = new BaseRepository();
+    }
+
+    public void setScanToString(String input) {
+        ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        setScanner();
     }
 
     /**
@@ -45,16 +52,6 @@ public class BaseView {
      */
     public int getIntInput() {
         return Integer.parseInt(scanner.nextLine());
-    }
-
-    public Integer getIntInputOrNull() {
-        String input = scanner.nextLine();
-        return input.equals("") ? null : Integer.parseInt(input);
-    }
-
-    public Double getDoubleInput() {
-        String input = scanner.nextLine();
-        return input.equals("") ? null : Double.parseDouble(input);
     }
 
     public void validateNotNullString(String string) throws RuntimeException {

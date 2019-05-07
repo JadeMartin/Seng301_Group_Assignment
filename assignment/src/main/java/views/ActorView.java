@@ -31,6 +31,7 @@ public class ActorView extends BaseView {
         return getInput();
     }
 
+    //Todo: Junit
     public boolean convertHomonymInput(String homonymInput) throws RuntimeException {
         if (homonymInput.equals("1")) {
             return true;

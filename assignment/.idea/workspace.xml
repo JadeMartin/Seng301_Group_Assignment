@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="Implemented validation checking">
       <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/ActorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ActorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/BaseView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -105,114 +104,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/unit/ActorTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#495#496#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/unit/BaseTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+            <state relative-caret-position="383">
+              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2390#2391#0" expanded="true" />
-                <element signature="e#2425#2426#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+            <state relative-caret-position="-38">
+              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/ArgumentView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#257#266#0" expanded="true" />
-                <element signature="e#1350#1351#0" expanded="true" />
-                <element signature="e#1416#1417#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1524#1525#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/ArgumentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/steps/CreateAffiliationSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/steps/BackgroundSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/repository/BackgroundTestRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/argument">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/affiliation">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/argument_link">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -243,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e4bfc55a-0c29-44a1-bee9-678f447f7a30/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/scripts/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/java/models/Message.java" />
@@ -276,12 +203,10 @@
         <option value="$PROJECT_DIR$/src/main/java/views/MenuView.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/SourceRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/DiscourseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/views/ActorView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/SourceView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/DiscourseView.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/SourceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/DiscourseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/views/BaseView.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_4.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_5.sql" />
@@ -294,6 +219,10 @@
         <option value="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/ActorView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/BaseView.java" />
+        <option value="$PROJECT_DIR$/src/test/java/unit/ActorTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/unit/BaseTests.java" />
       </list>
     </option>
   </component>
@@ -405,6 +334,14 @@
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -454,7 +391,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Remote.Debug sbt shell">
+  <component name="RunManager" selected="JUnit.unit in assignment">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="assignment" />
@@ -467,6 +404,20 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestRunner" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="unit in assignment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -488,14 +439,15 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestRunner" />
       <item itemvalue="Remote.Debug sbt shell" />
+      <item itemvalue="JUnit.unit in assignment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.unit in assignment" />
         <item itemvalue="Remote.Debug sbt shell" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="JUnit.TestRunner" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -590,39 +542,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRunner - 2019.05.07 at 17h 07m 53s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 47m 06s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 08m 29s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 54m 16s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 09m 34s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 55m 04s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 14m 08s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 56m 27s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 14m 58s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 56m 43s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 15m 24s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 56m 57s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 19m 17s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 57m 49s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 20m 27s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 58m 23s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 28m 22s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 58m 35s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 32m 15s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 18h 59m 40s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97739000" />
+    <option name="totallyTimeSpent" value="102973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,16 +693,6 @@
       </provider>
     </entry>
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/CreateOrganisationSteps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -781,20 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="33" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-            <element signature="e#1998#1999#0" expanded="true" />
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,12 +820,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="176">
           <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2390#2391#0" expanded="true" />
             <element signature="e#2425#2426#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/ArgumentLinkTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/OrganisationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/ArgumentTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/BaseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/BaseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/ActorTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/BaseTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
           </folding>
         </state>
       </provider>
