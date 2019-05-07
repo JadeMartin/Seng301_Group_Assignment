@@ -22,18 +22,18 @@ public class ArgumentView extends BaseView {
      * Provides a user input for a user to submit the start of the argument as a index from the discourse
      * @return the user's  start of argument
      */
-    public int getStart() {
+    public String getStart() {
         System.out.println("Enter the start index from the discourse: ");
-        return getIntInput();
+        return getInput();
     }
 
     /**
      * Provides a user input for a user to submit the end of the argument as a index from the discourse
      * @return the user's  end of argument
      */
-    public int getEnd() {
+    public String getEnd() {
         System.out.println("Enter the end index from the discourse: ");
-        return getIntInput();
+        return getInput();
     }
 
     public void displayDuplicateArgument() {
@@ -55,60 +55,57 @@ public class ArgumentView extends BaseView {
      * @return int argument id for selected argument
      * @throws SQLException
      */
-    public int displayArguments(ResultSet arguments) throws SQLException {
+    public String displayArguments(ResultSet arguments) throws SQLException {
         System.out.println("Select an argument by entering id: ");
         System.out.println("0: Back to menu");
         while (arguments.next()) {
             ids.add(arguments.getInt("argument_id"));
             System.out.println(String.format("%d: %s %d %d ", arguments.getInt("argument_id"), arguments.getString("rephrasing"), arguments.getInt("start"), arguments.getInt("end")));
         }
-        int id = getIntInput();
-        if (ids.contains(id)) {
-            return id;
-        } else {
-            displayOutOfBounds();
-            return 0;
-        }
+        return getInput();
     }
 
 
         /**
          * Get second argument to create an argument link
-         * @param argumentOneId
          * @return int argument id for selected argument
          */
-    public int getArgumentTwo(int argumentOneId) {
+    public String getArgumentTwo() {
         // TODO check for duplicate entry ie argumentOneID
         System.out.println("Select another argument by entering another id: ");
-        int id = getIntInput();
-        if (id == argumentOneId) {
-            System.out.println("Can not select the same argument");
-            return 0;
-        }
-        if (ids.contains(id)) {
-            return id;
-        } else {
-            displayOutOfBounds();
-            return 0;
-        }
+        return getInput();
     }
+
 
     /**
      * provide user input to create an argument link
      * @return boolean of the inputed link type either true for for or false for against
      */
-    public int getArgumentLink() {
+    public String getArgumentLink() {
         //check for 0 to go back to menu
-        System.out.println("Press 1 to create a for link type. \n" +
-                "Press 2 to create an against link type\n" +
+        System.out.println("Press 1 to create a FOR link type. \n" +
+                "Press 2 to create an AGAINST link type\n" +
                 "Press 0 back to menu. \n");
-        int id = getIntInput();
-        if (id > 2 || id < 0) {
-            displayOutOfBounds();
-            return 0;
-        } else {
-            return id;
-        }
+        return getInput();
     }
 
+    public int convertTo(String argumentStart) {
+        int argumentIndex = Integer.parseInt(argumentStart);
+        if(argumentIndex < 0) {
+            displayOutOfBounds();
+            return -1;
+        }
+        return argumentIndex;
+    }
+
+    public boolean convertToBool(String link) {
+        int linkInt = Integer.parseInt(link);
+        if (linkInt == 1) {
+            return true;
+        } else if (linkInt == 2) {
+            return false;
+        } else {
+            throw new RuntimeException();
+        }
+    }
 }
