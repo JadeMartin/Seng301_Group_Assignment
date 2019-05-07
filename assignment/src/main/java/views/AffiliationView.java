@@ -19,20 +19,22 @@ public class AffiliationView extends BaseView {
      * Provides a user input for a user to submit the start date of the affiliation
      * @return the user's last name that they submitted
      */
-    public Date getStartDate() throws ParseException {
+    public String getStartDate() {
         System.out.println("Enter Start Date or press enter to skip: ");
-        String input = getInput();
-        return input == null ? null : new SimpleDateFormat("dd/MM/yyyy").parse(input);
+        return getInput();
     }
 
     /**
      * Provides a user input for a user to submit the end date of the affiliation
      * @return the user's level of trust that they submitted
      */
-    public Date getEndDate() throws ParseException {
+    public String getEndDate() {
         System.out.println("Enter End Date or press enter to skip: ");
-        String input = getInput();
-        return input == null ? null : new SimpleDateFormat("dd/MM/yyyy").parse(input);
+        return getInput();
+    }
+
+    public Date convertToDate(String date) throws ParseException {
+        return date == null ? null : new SimpleDateFormat("dd/MM/yyyy").parse(date);
     }
 
     public void displaySuccessMessage() {

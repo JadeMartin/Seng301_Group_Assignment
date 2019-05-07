@@ -5,6 +5,7 @@ import models.Affiliation;
 import repository.AffiliationRepository;
 import views.AffiliationView;
 
+import javax.swing.text.html.HTMLDocument;
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.SQLException;
@@ -26,18 +27,33 @@ public class AffiliationController {
 
     public void insertAffiliationHandler(int actorId, Integer organisationId) {
         String affiliationRole = affiliationView.getRole();
-        Date affiliationStartDate = null;
-        Date affiliationEndDate = null;
+        Date startDate = null;
+        Date endDate = null;
+
         try {
-            affiliationStartDate = affiliationView.getStartDate();
-            affiliationEndDate = affiliationView.getEndDate();
+            String startDateString = affiliationView.getStartDate();
+            startDate = affiliationView.convertToDate(startDateString);
+
+            String endDateString = affiliationView.getEndDate();
+            endDate = affiliationView.convertToDate(endDateString);
 
         } catch (Exception e) {
             affiliationView.displayIncorrectInput();
             return;
         }
-        Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, affiliationStartDate, affiliationEndDate);
+
+        Affiliation affiliation = new Affiliation(actorId, organisationId, affiliationRole, startDate, endDate);
         insertAffiliation(affiliation);
+    }
+
+    public void validateDates(Date startDate, Date endDate) {
+        if (startDate == null || endDate == null) {
+            return;
+        } else {
+            if (!startDate.before(endDate)) {
+                throw new RuntimeException();
+            }
+        }
     }
 
     /**
@@ -48,11 +64,13 @@ public class AffiliationController {
      *   otherwise display success message
      */
     public void insertAffiliation(Affiliation affiliation) {
-
-        if (!affiliation.getStartDate().before(affiliation.getEndDate())) {
-            affiliationView.displayIncorrectDateOrder();
+        try {
+            validateDates(affiliation.getStartDate(), affiliation.getEndDate());
+        } catch (Exception e) {
+            affiliationView.displayIncorrectInput();
             return;
         }
+
         // Try to insert organisation and display message based on success
         try {
             affiliationRepository.insert(affiliation);

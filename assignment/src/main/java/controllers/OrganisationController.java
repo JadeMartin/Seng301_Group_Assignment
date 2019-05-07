@@ -26,13 +26,6 @@ public class OrganisationController {
         organisationRepository = new OrganisationRepository();
     }
 
-    private boolean isValidated(Organisation organisation) {
-        if (organisation.getOrganisationName() != "") {
-            return true;
-        }
-        return false;
-    }
-
     /**
      * Inserts an organisation by:
      * - Asking for the organisation name
@@ -42,12 +35,14 @@ public class OrganisationController {
      */
     public void insertOrganisation() {
         String organisationName = organisationView.getName();
-        Organisation organisation = new Organisation(organisationName);
-
-        if (!isValidated(organisation)) {
+        try {
+            organisationView.isNameValidated(organisationName);
+        } catch (Exception e) {
             organisationView.displayNameError();
             return;
         }
+
+        Organisation organisation = new Organisation(organisationName);
 
         // Try to insert organisation and display message based on success
         try {
@@ -67,12 +62,12 @@ public class OrganisationController {
     public Integer selectOrganisation() {
         try {
             ResultSet organisationSet = organisationRepository.getAll();
-            return organisationView.getOrganisationId(organisationSet);
+            String organisationIdString = organisationView.getOrganisationId(organisationSet);
+            return organisationView.convertToOrgOption(organisationIdString);
 
         } catch (SQLException e) {
-            System.out.println(e);
+            organisationView.displayIncorrectInput();
+            return 0;
         }
-        // return 0 to return user to main menu
-        return 0;
     }
 }

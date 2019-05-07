@@ -95,7 +95,7 @@ public class ActorController {
             String actorIdString = actorView.getActorId(actorSet);
             return actorView.convertToOption(actorIdString, "actor", "actor_id");
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             actorView.displayIncorrectInput();
             return 0;
         }

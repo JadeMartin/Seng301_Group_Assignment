@@ -37,25 +37,34 @@ public class OrganisationView extends BaseView {
         super.displaySuccess("The organisation was inserted");
     }
 
+    public void isNameValidated(String organisationName) throws RuntimeException {
+
+        if (organisationName == null) {
+            throw new RuntimeException();
+        }
+    }
+
+    public Integer convertToOrgOption(String organisationIdString) throws SQLException {
+        System.out.println(organisationIdString);
+        if (organisationIdString == null || organisationIdString.equals("")) {
+            return null;
+        }
+        return convertToOption(organisationIdString, "organisation", "organisation_id");
+    }
+
+
+
     /**
      * provide user input to select organisation
-     * @param organisationArrayList
      * @return organisation id
      */
-    public Integer getOrganisationId(ResultSet resultSet) throws SQLException {
+    public String getOrganisationId(ResultSet resultSet) throws SQLException {
         System.out.println("Select an organisation by entering id or press enter to skip: ");
         System.out.println("0: Back to menu");
-        ArrayList<Integer> ids = new ArrayList<Integer>();
+
         while (resultSet.next()) {
-            ids.add(resultSet.getInt("organisation_id"));
             System.out.println(String.format("%d: %s", resultSet.getInt("organisation_id"), resultSet.getString("name")));
         }
-        int id =  getIntInputOrNull();
-        if (ids.contains(id)) {
-            return id;
-        } else {
-            displayOutOfBounds();
-            return 0;
-        }
+        return getInput();
     }
 }
