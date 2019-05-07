@@ -90,8 +90,8 @@ public class ArgumentView extends BaseView {
      */
     public String getArgumentLink() {
         //check for 0 to go back to menu
-        System.out.println("Press 1 to create a FOR link type. \n" +
-                "Press 2 to create an AGAINST link type\n" +
+        System.out.println("Press 1 to create a backed link type. \n" +
+                "Press 2 to create an contradicted link type\n" +
                 "Press 0 back to menu. \n");
         return getInput();
     }

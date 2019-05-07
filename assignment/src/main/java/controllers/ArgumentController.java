@@ -4,6 +4,7 @@ package controllers;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import models.Argument;
 import models.ArgumentLink;
+import repository.ActorRepository;
 import repository.ArgumentRepository;
 import views.ArgumentView;
 
@@ -16,6 +17,7 @@ import java.sql.SQLException;
 public class ArgumentController {
     ArgumentView argumentView;
     ArgumentRepository argumentRepository;
+    ActorRepository actorRepository;
 
     /**
      * Constructor for an argument also creates the argument view and repo
@@ -23,6 +25,7 @@ public class ArgumentController {
     public ArgumentController() {
         argumentView = new ArgumentView();
         argumentRepository = new ArgumentRepository();
+        actorRepository = new ActorRepository();
     }
 
     /**
@@ -87,23 +90,22 @@ public class ArgumentController {
      * - display message depending on success or failure
      */
     public void insertArgumentLink() {
-        boolean boolLink = false;
+        boolean boolLink;
         int argumentOne = 0;
         int argumentTwo = 0;
         //TODO check arguement one and two are not the same
 
         try {
             ResultSet arguments = argumentRepository.getAll();
-            String argumentOneId = argumentView.displayArguments(arguments);
-            String argumentTwoId = argumentView.getArgumentTwo();
-
             try {
+                String argumentOneId = argumentView.displayArguments(arguments);
                 argumentOne = argumentView.convertTo(argumentOneId);
             } catch (Exception e) {
                 argumentView.displayIncorrectInput();
             }
             if (argumentOne != 0) {
                 try {
+                    String argumentTwoId = argumentView.getArgumentTwo();
                     argumentTwo = argumentView.convertTo(argumentTwoId);
                 } catch (Exception e) {
                     argumentView.displayIncorrectInput();
@@ -113,7 +115,12 @@ public class ArgumentController {
                     try {
                         boolLink = argumentView.convertToBool(link);
                         ArgumentLink argumentLink = new ArgumentLink(argumentOne, argumentTwo, boolLink);
+                        Double confidence = argumentRepository.getArgumentConfidence(boolLink, argumentOne);
                         argumentRepository.insertLink(argumentLink);
+                        argumentRepository.updateArgument(argumentOne, confidence);
+                        int actorId = argumentRepository.getUser(argumentOne);
+                        double lot = actorRepository.getLot(actorId);
+                        actorRepository.updateLevelOfTrust(actorId, lot + confidence);
                         argumentView.displaySuccessMessage();
                     } catch (Exception e) {
                             argumentView.displayIncorrectInput();

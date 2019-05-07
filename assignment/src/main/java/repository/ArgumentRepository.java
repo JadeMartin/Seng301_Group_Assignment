@@ -33,13 +33,42 @@ public class ArgumentRepository extends BaseRepository {
         }
     }
 
+    public double getArgumentConfidence(boolean argumentLinkType, int argumentOne) throws SQLException  {
+        double add = -1.00;
+        if (argumentLinkType) {
+            add = 1;
+        }
+        PreparedStatement statement = getConnection().prepareStatement("select * from argument where argument_id = ?");
+        statement.setInt(1, argumentOne);
+        ResultSet resultSet = statement.executeQuery();
+        statement.closeOnCompletion();
+        if (resultSet.next()) {
+            return (resultSet.getDouble("confidence") + add);
+        }
+        return add;
+    }
+
+    public void updateArgument(Integer id, Double confidence) throws SQLException {
+        if (null != getConnection()) {
+            PreparedStatement updateStatement = getConnection().prepareStatement("update argument set confidence = ? "
+                    + "WHERE argument_id = ?;");
+            updateStatement.setDouble(1, confidence);
+            updateStatement.setInt(2, id);
+
+            updateStatement.executeUpdate();
+            updateStatement.closeOnCompletion();
+        } else {
+            System.out.println("Failed to insert");
+        }
+    }
+
     /**
      * function to insert a argument link between two arguments
      * @throws SQLException
      */
     public void insertLink(ArgumentLink argumentLink) throws SQLException {
-        //TODO check for valid input not null
         if (null != getConnection()) {
+           // System.out.println(getArgumentConfidence(argumentLink.getArgumentLinkType(), argumentLink.getArgumentOne()));
             PreparedStatement statement = getConnection().prepareStatement("insert into argument_link(argument_one_id, argument_two_id, argument_link_type) values (?,?,?)");
             // use indexes of wildcard ("?") starting from 1
             statement.setInt(1, argumentLink.getArgumentOne());
@@ -54,7 +83,7 @@ public class ArgumentRepository extends BaseRepository {
     }
 
     /**
-     * Check for duplicate entrys with same start and end indexs
+     * Check for duplicate entry with same start and end indexs
      * @param discourseId
      * @param argumentStart
      * @param argumentEnd
@@ -67,10 +96,10 @@ public class ArgumentRepository extends BaseRepository {
         statement.setInt(3, argumentEnd);
         ResultSet resultSet = statement.executeQuery();
         statement.closeOnCompletion();
-        if (resultSet != null) {
-            return false;
+        if (resultSet.next()) {
+            return true;
         }
-        return true;
+        return false;
     }
 
     /**
@@ -80,5 +109,13 @@ public class ArgumentRepository extends BaseRepository {
      */
     public ResultSet getAll() throws SQLException {
         return super.getAllByTableName("argument");
+    }
+
+    public int getUser(int argumentOne) throws SQLException {
+        PreparedStatement statement = getConnection().prepareStatement("select * from argument where argument_id = ?");
+        statement.setInt(1, argumentOne);
+        ResultSet resultSet = statement.executeQuery();
+        statement.closeOnCompletion();
+        return resultSet.getInt("actor_id");
     }
 }
