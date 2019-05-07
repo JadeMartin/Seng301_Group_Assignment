@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class ActorRepository extends BaseRepository {
 
     public void insert(Actor actor) throws SQLException {
-
         if (!actor.getFirstName().equals("") && !actor.getLastName().equals("")) {
             PreparedStatement statement = getConnection().prepareStatement("insert into actor (first_name, last_name, level_of_trust) values (?,?,?)");
             // use indexes of wildcard ("?") starting from 1
@@ -41,6 +40,29 @@ public class ActorRepository extends BaseRepository {
         ResultSet resultSet = statement.executeQuery();
         statement.closeOnCompletion();
         return resultSet;
+    }
+
+
+    public void updateLevelOfTrust(int actorId, Double level_of_trust) throws SQLException {
+        if (null != getConnection()) {
+            PreparedStatement updateStatement = getConnection().prepareStatement("update actor "
+                    + "set level_of_trust = ? "
+                    + "Where actor_id = ?; ");
+            updateStatement.setDouble(1, level_of_trust);
+            updateStatement.setInt(2, actorId);
+            updateStatement.executeUpdate();
+            updateStatement.closeOnCompletion();
+        } else {
+            System.out.println("Failed to insert");
+        }
+    }
+
+    public double getLot(int actorId) throws SQLException {
+        PreparedStatement statement = getConnection().prepareStatement("select level_of_trust from actor where actor_id = ? ");
+        statement.setInt(1, actorId);
+        ResultSet resultSet = statement.executeQuery();
+        statement.closeOnCompletion();
+        return resultSet.getDouble("level_of_trust");
     }
 
 //    /**

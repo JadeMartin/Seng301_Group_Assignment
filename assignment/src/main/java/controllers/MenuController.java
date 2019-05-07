@@ -58,11 +58,11 @@ public class MenuController {
                     break;
 
                 case 4:
-                    argumentInsertHandler(1);
+                    argumentInsertHandler();
                     break;
 
                 case 5:
-                    argumentInsertHandler(2);
+                    argumentController.insertArgumentLink();
                     break;
 
                 default:
@@ -96,19 +96,19 @@ public class MenuController {
         }
     }
 
-    private void argumentInsertHandler(int option) {
-        int actorId = actorController.selectActor();
+    private void argumentInsertHandler() {
+        int actorId = 0;
+        try {
+            actorId = actorController.selectActor();
+        } catch (Exception e) {
+            menuView.displayIncorrectInput();
+        }
         if (actorId != 0) {
             int sourceId = sourceController.selectSource();
             if (sourceId != 0) {
                 int discourseId = discourseController.selectDiscourse(sourceId);
                 if (discourseId != 0) {
-                    //Links ??
-                    if (option == 1) {
-                        argumentController.insertArgument(actorId, discourseId);
-                    } else if (option == 2) {
-                        argumentController.insertArgumentLink();
-                    }
+                    argumentController.insertArgument(actorId, discourseId);
                 }
             }
         }

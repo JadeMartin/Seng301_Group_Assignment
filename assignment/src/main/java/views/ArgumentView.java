@@ -1,7 +1,5 @@
 package views;
 
-import models.Argument;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -83,8 +81,8 @@ public class ArgumentView extends BaseView {
      */
     public String getArgumentLink() {
         //check for 0 to go back to menu
-        System.out.println("Press 1 to create a FOR link type. \n" +
-                "Press 2 to create an AGAINST link type\n" +
+        System.out.println("Press 1 to create a backed link type. \n" +
+                "Press 2 to create an contradicted link type\n" +
                 "Press 0 back to menu. \n");
         return getInput();
     }
@@ -92,8 +90,7 @@ public class ArgumentView extends BaseView {
     public int convertTo(String argumentStart) {
         int argumentIndex = Integer.parseInt(argumentStart);
         if(argumentIndex < 0) {
-            displayOutOfBounds();
-            return -1;
+            throw new RuntimeException();
         }
         return argumentIndex;
     }
