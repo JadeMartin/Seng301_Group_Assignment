@@ -42,11 +42,6 @@ public class ArgumentView extends BaseView {
         super.displaySuccess("The argument was inserted");
     }
 
-
-
-
-    // Argument Link view
-
     /**
      * Display arguments so an argument can be selected via user input
      * @param arguments
@@ -54,11 +49,11 @@ public class ArgumentView extends BaseView {
      * @throws SQLException
      */
     public String displayArguments(ResultSet arguments) throws SQLException {
-        System.out.println("Select an argument by entering id: ");
-        System.out.println("0: Back to menu");
+        System.out.println("Select an argument by entering an id: ");
+        System.out.println("0) Back to menu");
         while (arguments.next()) {
             ids.add(arguments.getInt("argument_id"));
-            System.out.println(String.format("%d: %s %d %d ", arguments.getInt("argument_id"), arguments.getString("rephrasing"), arguments.getInt("start"), arguments.getInt("end")));
+            System.out.println(String.format("%d) Rephrasing: %s\n   Start: %d End: %d ", arguments.getInt("argument_id"), arguments.getString("rephrasing"), arguments.getInt("start"), arguments.getInt("end")));
         }
         return getInput();
     }
@@ -69,7 +64,6 @@ public class ArgumentView extends BaseView {
          * @return int argument id for selected argument
          */
     public String getArgumentTwo() {
-        // TODO check for duplicate entry ie argumentOneID
         System.out.println("Select another argument by entering another id: ");
         return getInput();
     }
@@ -109,5 +103,9 @@ public class ArgumentView extends BaseView {
 
     public void displaySameArgument() {
         super.displayError("Can not select the same argument twice to create a link");
+    }
+
+    public void displayIncorrectEnd() {
+        super.displayError("Start needs to be before end index");
     }
 }

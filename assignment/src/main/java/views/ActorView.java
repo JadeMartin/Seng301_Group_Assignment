@@ -45,17 +45,17 @@ public class ActorView extends BaseView {
      */
     public String getActorId(ResultSet resultSet) throws SQLException {
         System.out.println("Select an actor by entering id: ");
-        System.out.println("0: Back to menu");
+        System.out.println("0) Back to menu");
 
         while (resultSet.next()) {
-            System.out.println(String.format("%d: %s %s", resultSet.getInt("actor_id"), resultSet.getString("first_name"), resultSet.getString("last_name")));
+            System.out.println(String.format("%d) First name: %s\n   Last name: %s\n   Level of trust: %.2f", resultSet.getInt("actor_id"), resultSet.getString("first_name"), resultSet.getString("last_name"), resultSet.getDouble("level_of_trust")));
         }
 
         return getInput();
     }
 
     public String askIfHomonym(String firstName, String lastName) {
-        super.displayConfirmation("Would you like to insert homonym actor?");
+        super.displayConfirmation("Would you like to insert the homonym actor?");
         System.out.println(firstName + lastName);
         System.out.println("1: Yes\n" +
                            "2: No");
