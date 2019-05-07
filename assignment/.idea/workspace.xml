@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="finishe documenting and updating database">
-      <change beforePath="$PROJECT_DIR$/src/test/java/unit/ActorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/ActorTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unit/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/BaseTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -107,12 +105,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="95" column="95" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="95" />
+            <state relative-caret-position="253">
+              <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
                 <element signature="e#542#543#0" expanded="true" />
                 <element signature="e#596#597#0" expanded="true" />
               </folding>
@@ -121,10 +117,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-555">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="61" />
+            <state relative-caret-position="193">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -515,9 +520,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 23m 42s.xml">
-      <configuration name="unit in assignment" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="unit_in_assignment - 2019.05.07 at 19h 28m 37s.xml">
       <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
@@ -545,9 +547,12 @@
     <history-entry file="unit_in_assignment - 2019.05.07 at 19h 37m 27s.xml">
       <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 41m 12s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105028000" />
+    <option name="totallyTimeSpent" value="105422000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,14 +578,14 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49839914" weight="0.3480226" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32968536" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.24760602" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.24760602" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32831737" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32831737" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.6248666" weight="0.26440677" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" weight="0.44596443" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" visible="true" weight="0.44596443" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.3751334" side_tool="true" weight="0.23497267" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32881355" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -874,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-492">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -999,22 +997,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="61" />
+        <state relative-caret-position="193">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-555">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="95" column="95" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="95" />
+        <state relative-caret-position="253">
+          <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
             <element signature="e#542#543#0" expanded="true" />
             <element signature="e#596#597#0" expanded="true" />
           </folding>

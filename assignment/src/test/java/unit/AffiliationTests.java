@@ -1,5 +1,6 @@
 package unit;
 
+import controllers.AffiliationController;
 import models.Affiliation;
 import org.junit.After;
 import org.junit.Assert;
@@ -12,14 +13,17 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class AffiliationTests {
     private AffiliationView affiliationView;
+    private AffiliationController affiliationController;
     private final ByteArrayOutputStream output = new ByteArrayOutputStream();
 
 
     public AffiliationTests() {
         affiliationView = new AffiliationView();
+        affiliationController = new AffiliationController();
     }
 
     @Before
@@ -94,6 +98,20 @@ public class AffiliationTests {
     public void displayErrorMessage() {
         affiliationView.displayErrorMessage();
         Assert.assertEquals(output.toString().trim(), "Error: Affiliation could not be inserted");
+    }
+
+    @Test
+    public void validDatesSuccess() throws ParseException{
+        Date start = new SimpleDateFormat("dd/MM/yyyy").parse("11/11/11");
+        Date end = new SimpleDateFormat("dd/MM/yyyy").parse("12/12/12");
+        affiliationController.validateDates(start, end);
+    }
+
+    @Test (expected = RuntimeException.class)
+    public void validDatesBefore() throws ParseException{
+        Date start = new SimpleDateFormat("dd/MM/yyyy").parse("12/12/12");
+        Date end = new SimpleDateFormat("dd/MM/yyyy").parse("11/11/11");
+        affiliationController.validateDates(start, end);
     }
 
 }
