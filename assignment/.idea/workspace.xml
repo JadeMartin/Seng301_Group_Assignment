@@ -2,15 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="Implemented validation checking">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/assignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DiscourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DiscourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/BaseView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/DiscourseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/DiscourseView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/SourceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/SourceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/Seng301-Assignment.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/src/Models/Actor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/src/Models/Affiliation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/src/Models/Organisation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/default/seng301-assignment_2.12/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/default/seng301-assignment_2.12/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/default-seng301-assignment_2.12-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/ivy-report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/resolution-cache/reports/ivy-report.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/scala-2.12/seng301-assignment_2.12-0.1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/$global/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/ivySbt/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/projectDescriptors/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/update/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/$global/$global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/bgRun/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/compile/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/exportedProductJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/mainClass/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/packageBin/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/packageBin/$global/streams/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/dependencyClasspathAsJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/exportedProductJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/fullClasspathAsJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/internalDependencyAsJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -46,21 +100,42 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="database" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="database" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="actor: table" type="ffe0bd85:SqliteImplModel$Table" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="actor: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="database" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="source: table" type="ffe0bd85:SqliteImplModel$Table" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="affiliation: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="argument: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="argument_link: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="organisation: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -87,84 +162,36 @@
       </state>
     </system>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="738873356">
-      <usages-collector id="statistics.vcs.git.usages">
-        <counts>
-          <entry key="git.branch.checkout.remote" value="2" />
-          <entry key="git.branch.create.new" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="argument" value="5" />
-          <entry key="argument_link" value="2" />
-          <entry key="discourse" value="1" />
-          <entry key="feature" value="1" />
-          <entry key="java" value="126" />
-          <entry key="organisation" value="1" />
-          <entry key="properties" value="1" />
-          <entry key="sbt" value="1" />
-          <entry key="source" value="1" />
-          <entry key="sql" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Cucumber" value="1" />
-          <entry key="Database Element" value="10" />
-          <entry key="JAVA" value="126" />
-          <entry key="Properties" value="1" />
-          <entry key="Scratch" value="8" />
-          <entry key="sbt" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cell" value="2" />
-          <entry key="java" value="5481" />
-          <entry key="sbtShell" value="368" />
-          <entry key="sql" value="697" />
-          <entry key="txt" value="672" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="5481" />
-          <entry key="PLAIN_TEXT" value="672" />
-          <entry key="Scratch" value="699" />
-          <entry key="sbtShell" value="368" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="119" column="65" lean-forward="true" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
+            <state relative-caret-position="338">
+              <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-576">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/ArgumentView.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+            <state relative-caret-position="120">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,19 +200,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/SourceView.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/DiscourseView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="193">
+              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -266,12 +287,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="-1" />
     <option name="width" value="1920" />
@@ -283,6 +298,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -345,12 +361,63 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="steps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,143 +438,6 @@
       <recent name="repository" />
       <recent name="views" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/assignment.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/database.sqlite</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/controllers/ActorController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/controllers/MenuController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/models/Affiliation.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/repository/ActorRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/views/AffiliationView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/views/BaseView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/views/OrganisationView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/TestRunner.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/repository/BackgroundTestRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/repository/OrganisationTestRepository.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/repository/ActorTestRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/repository/AffiliationTestRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/steps/BackgroundSteps.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/steps/CreateActorSteps.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/steps/CreateAffiliationSteps.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/steps/CreateOrganisationSteps.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/features/createActor.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/features/createAffiliation.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/features/createOrganisation.feature</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/steps/common/BackgroundSteps.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/steps/organisation/CreateOrganisationSteps.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/features/organisation/createOrganisation.feature</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -674,7 +604,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83135000" />
+    <option name="totallyTimeSpent" value="83338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -686,20 +616,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23692636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23676682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" sideWeight="0.4994664" visible="true" weight="0.32896176" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4994664" weight="0.32896176" />
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49839914" weight="0.3486339" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info anchor="bottom" id="Find" order="3" visible="true" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.24870466" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
@@ -721,7 +650,7 @@
       <window_info anchor="right" id="sbt" order="5" weight="0.3297568" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Gradle" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.16275346" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.21959943" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Maven Projects" order="11" />
@@ -768,9 +697,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added menu and actor still needs db connection and affiliations to be configured correctly" />
     <MESSAGE value="created branch for story 3 started implementing models and controllers for the new entitys" />
@@ -807,9 +733,7 @@
     <entry file="file://$PROJECT_DIR$/project/build.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0472b650-29cc-48bd-a126-431502c1f66c/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0472b650-29cc-48bd-a126-431502c1f66c/console.sql" />
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -817,30 +741,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/organisation/createOrganisation.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/common/BackgroundSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_1.sql" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/organisation/createOrganisation.feature" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/common/BackgroundSteps.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -851,14 +755,7 @@
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/organisation" />
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/source" />
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/discourse" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/organisation/CreateOrganisationSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/organisation/CreateOrganisationSteps.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/views/MenuView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -866,13 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Source.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Source.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Organisation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -880,13 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Discourse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Discourse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Argument.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -908,13 +793,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_2.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/SourceRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -943,7 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/ActorRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1003,69 +881,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link" />
     <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="193">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument" />
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
