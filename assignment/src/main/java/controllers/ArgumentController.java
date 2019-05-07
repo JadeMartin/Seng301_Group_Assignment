@@ -93,8 +93,6 @@ public class ArgumentController {
         boolean boolLink;
         int argumentOne = 0;
         int argumentTwo = 0;
-        //TODO check arguement one and two are not the same
-
         try {
             ResultSet arguments = argumentRepository.getAll();
             try {
@@ -111,20 +109,24 @@ public class ArgumentController {
                     argumentView.displayIncorrectInput();
                 }
                 if (argumentTwo != 0) {
-                    String link = argumentView.getArgumentLink();
-                    try {
-                        boolLink = argumentView.convertToBool(link);
-                        ArgumentLink argumentLink = new ArgumentLink(argumentOne, argumentTwo, boolLink);
-                        Double confidence = argumentRepository.getArgumentConfidence(boolLink, argumentOne);
-                        argumentRepository.insertLink(argumentLink);
-                        argumentRepository.updateArgument(argumentOne, confidence);
-                        int actorId = argumentRepository.getUser(argumentOne);
-                        double lot = actorRepository.getLot(actorId);
-                        actorRepository.updateLevelOfTrust(actorId, lot + confidence);
-                        argumentView.displaySuccessMessage();
-                    } catch (Exception e) {
+                    if (argumentOne == argumentTwo) {
+                        argumentView.displaySameArgument();
+                    }else {
+                        String link = argumentView.getArgumentLink();
+                        try {
+                            boolLink = argumentView.convertToBool(link);
+                            ArgumentLink argumentLink = new ArgumentLink(argumentOne, argumentTwo, boolLink);
+                            Double confidence = argumentRepository.getArgumentConfidence(boolLink, argumentOne);
+                            argumentRepository.insertLink(argumentLink);
+                            argumentRepository.updateArgument(argumentOne, confidence);
+                            int actorId = argumentRepository.getUser(argumentOne);
+                            double lot = actorRepository.getLot(actorId);
+                            actorRepository.updateLevelOfTrust(actorId, lot + confidence);
+                            argumentView.displaySuccessMessage();
+                        } catch (Exception e) {
                             argumentView.displayIncorrectInput();
                         }
+                    }
                     }
                 }
         } catch (SQLException e) {

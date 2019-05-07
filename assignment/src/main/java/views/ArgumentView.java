@@ -90,7 +90,8 @@ public class ArgumentView extends BaseView {
      */
     public String getArgumentLink() {
         //check for 0 to go back to menu
-        System.out.println("Press 1 to create a backed link type. \n" +
+        System.out.println("Create an argument link \n" +
+                "Press 1 to create a backed link type. \n" +
                 "Press 2 to create an contradicted link type\n" +
                 "Press 0 back to menu. \n");
         return getInput();
@@ -113,5 +114,9 @@ public class ArgumentView extends BaseView {
         } else {
             throw new RuntimeException();
         }
+    }
+
+    public void displaySameArgument() {
+        super.displayError("Can not select the same argument twice to create a link");
     }
 }
