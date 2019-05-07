@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="Implemented validation checking">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/.idea/misc.xml" beforeDir="false" />
@@ -65,7 +66,10 @@
       <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seng301-Assignment/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ActorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ActorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/assignment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -141,6 +145,11 @@
     </expand>
     <select />
   </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="e4bfc55a-0c29-44a1-bee9-678f447f7a30" />
+    </checked>
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -189,10 +198,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/actor">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
-              <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,14 +239,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="72" column="63" lean-forward="true" selection-start-line="72" selection-start-column="63" selection-end-line="72" selection-end-column="63" />
+            <state relative-caret-position="119">
+              <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/discourse">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/source">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -242,7 +287,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Story3" />
+        <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
   </component>
@@ -297,13 +342,14 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/SourceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/ActorView.java" />
+        <option value="$PROJECT_DIR$/src/schema.sql" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="-1" />
-    <option name="width" value="1920" />
-    <option name="height" value="1079" />
+    <option name="width" value="1680" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -329,6 +375,32 @@
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -340,7 +412,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557189198534" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557221952267" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -384,16 +456,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="unit in assignment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestRunner" />
+      <item itemvalue="JUnit.unit in assignment" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.unit in assignment" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="JUnit.TestRunner" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -455,6 +542,7 @@
       <workItem from="1557107463761" duration="6904000" />
       <workItem from="1557130611077" duration="6449000" />
       <workItem from="1557184819909" duration="4223000" />
+      <workItem from="1557221252920" duration="699000" />
     </task>
     <task id="LOCAL-00001" summary="Added menu and actor still needs db connection and affiliations to be configured correctly">
       <created>1556803998477</created>
@@ -488,9 +576,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRunner - 2019.05.04 at 18h 18m 24s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestRunner - 2019.05.04 at 18h 23m 04s.xml">
       <configuration name="TestRunner" configurationId="JUnit" />
     </history-entry>
@@ -515,12 +600,15 @@
     <history-entry file="TestRunner - 2019.05.04 at 22h 44m 29s.xml">
       <configuration name="TestRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unit_in_assignment - 2019.05.07 at 21h 17m 51s.xml">
+    <history-entry file="TestRunner - 2019.05.07 at 21h 42m 50s.xml">
+      <configuration name="TestRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="unit_in_assignment - 2019.05.07 at 21h 43m 01s.xml">
       <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84386000" />
+    <option name="totallyTimeSpent" value="84585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,7 +621,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="823" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -542,18 +629,18 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4994664" weight="0.32896176" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4994664" weight="0.32819384" />
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49839914" weight="0.3486339" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.24760602" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.2859097" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32831737" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.6248666" weight="0.43497267" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" weight="0.4473324" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.6248666" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" weight="0.44808742" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.3751334" side_tool="true" weight="0.23497267" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32930845" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -626,27 +713,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Implemented validation checking" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/OrganisationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="69" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/build.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -662,13 +728,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_1.sql" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/organisation/createOrganisation.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/common/BackgroundSteps.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/organisation" />
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/source" />
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/discourse" />
@@ -703,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_2.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/SourceRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -732,37 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/ActorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/ArgumentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="42" selection-start-line="42" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -789,6 +814,16 @@
       </provider>
     </entry>
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument_link" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/argument" />
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -852,20 +887,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        <state relative-caret-position="135">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/ActorRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        <state relative-caret-position="795">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/OrganisationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="59" selection-start-line="69" selection-start-column="26" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" selection-start-line="67" selection-start-column="9" selection-end-line="69" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="89" column="62" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -874,11 +953,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="72" column="63" lean-forward="true" selection-start-line="72" selection-start-column="63" selection-end-line="72" selection-end-column="63" />
+        <state relative-caret-position="119">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="100" column="60" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/discourse">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/source">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/actor">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
