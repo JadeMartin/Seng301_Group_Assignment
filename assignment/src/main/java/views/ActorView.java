@@ -2,6 +2,7 @@ package views;
 
 import models.Actor;
 import models.Organisation;
+import org.omg.SendingContext.RunTime;
 
 import javax.sound.midi.Soundbank;
 import java.sql.ResultSet;
@@ -28,37 +29,37 @@ public class ActorView extends BaseView {
         return getInput();
     }
 
-
-    public String va
+    public boolean convertHomonymInput(String homonymInput) throws RuntimeException {
+        if (homonymInput.equals("1")) {
+            return true;
+        } else if (homonymInput.equals("2")) {
+            return false;
+        } else {
+            throw new RuntimeException();
+        }
+    }
 
     /**
      * provide user input to select actor
      * @return actor  id
      */
-    public int getActorId(ResultSet resultSet) throws SQLException {
+    public String getActorId(ResultSet resultSet) throws SQLException {
         System.out.println("Select an actor by entering id: ");
         System.out.println("0: Back to menu");
-        ArrayList<Integer> ids = new ArrayList<Integer>();
+
         while (resultSet.next()) {
-            ids.add(resultSet.getInt("actor_id"));
             System.out.println(String.format("%d: %s %s", resultSet.getInt("actor_id"), resultSet.getString("first_name"), resultSet.getString("last_name")));
         }
-        int id = getIntInput();
-        if (ids.contains(id)) {
-            return id;
-        } else {
-            displayOutOfBounds();
-            return 0;
-        }
 
+        return getInput();
     }
 
-    public boolean askIfHomonym(String firstName, String lastName) {
-        super.displayConfirmation("Is this you?");
+    public String askIfHomonym(String firstName, String lastName) {
+        super.displayConfirmation("Would you like to insert homonym actor?");
         System.out.println(firstName + lastName);
         System.out.println("1: Yes\n" +
                            "2: No");
-        return getIntInput() == 1;
+        return getInput();
     }
 
     public void displaySuccessMessage() {

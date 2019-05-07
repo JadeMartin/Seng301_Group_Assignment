@@ -2,6 +2,8 @@ package views;
 
 import models.Message;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -52,8 +54,25 @@ public class BaseView {
         return input.equals("") ? null : Double.parseDouble(input);
     }
 
-    public void validateNotNullString() throws {
+    public void validateNotNullString(String string) throws RuntimeException {
+        if (string.isEmpty()) {
+            throw new RuntimeException();
+        }
+    }
 
+    public int convertToOption(String inputString, ResultSet resultSet, String colName) throws SQLException {
+        int input = Integer.parseInt(inputString);
+
+        if (input == 0) {
+            return input;
+        }
+
+        while (resultSet.next()) {
+            if (resultSet.getInt(colName) == input) {
+                return input;
+            }
+        }
+        throw new RuntimeException();
     }
 
     /**

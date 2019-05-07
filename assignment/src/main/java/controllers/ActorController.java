@@ -31,7 +31,7 @@ public class ActorController {
         // Get and validate first name
         String actorFirstName = actorView.getFirstName();
         try {
-            actorView.validateFirstName(actorFirstName);
+            actorView.validateNotNullString(actorFirstName);
         } catch (Exception e) {
             actorView.displayIncorrectInput();
             return;
@@ -40,12 +40,11 @@ public class ActorController {
         // Get and validate last name
         String actorLastName = actorView.getLastName();
         try {
-            actorView.validateLastName(actorLastName)
+            actorView.validateNotNullString(actorLastName);
         } catch (Exception e) {
             actorView.displayIncorrectInput();
             return;
         }
-
 
         Actor actor = new Actor(actorFirstName, actorLastName);
 
@@ -66,13 +65,17 @@ public class ActorController {
         }
     }
 
-    private boolean askIfHomonym(Actor actor) throws SQLException {
+    private boolean askIfHomonym(Actor actor) throws SQLException, RuntimeException {
         //TODO: Display affiliations
         boolean isHomonym = false;
         ResultSet actorSet = actorRepository.getAllByFirstAndLast(actor.getFirstName(), actor.getLastName());
 
         while(actorSet.next()) {
-            if (actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"))) {
+            // Get and validate whether the actor is the same
+            String homonymInput = actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"));
+            isHomonym = actorView.convertHomonymInput(homonymInput);
+
+            if (isHomonym) {
                 return true;
             }
         }
@@ -89,7 +92,8 @@ public class ActorController {
     public int selectActor() {
         try {
             ResultSet actorSet = actorRepository.getAll();
-            return actorView.getActorId(actorSet);
+            String actorIdString = actorView.getActorId(actorSet);
+            return actorView.convertToOption(actorIdString, actorSet, "actor_id");
 
         } catch (SQLException e) {
             System.out.println(e);

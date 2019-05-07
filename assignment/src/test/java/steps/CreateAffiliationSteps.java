@@ -23,7 +23,7 @@ public class CreateAffiliationSteps {
 
     @Given("I have inserted an actor and organisation")
     public void iHaveInsertedAnActorAndOrganisation() throws SQLException {
-        Actor actor = new Actor("first", "last", 0.0);
+        Actor actor = new Actor("first", "last");
         ActorRepository actorRepository = new ActorRepository();
         actorRepository.insert(actor);
 
