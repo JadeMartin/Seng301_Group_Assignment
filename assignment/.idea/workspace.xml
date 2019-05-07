@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="finishe documenting and updating database">
-      <change beforePath="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="finishe documenting and updating database" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -102,10 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="338">
               <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -119,8 +117,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-555">
+            <state relative-caret-position="-576">
               <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -520,9 +530,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 28m 37s.xml">
-      <configuration name="unit in assignment" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="unit_in_assignment - 2019.05.07 at 19h 29m 07s.xml">
       <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
@@ -550,9 +557,12 @@
     <history-entry file="unit_in_assignment - 2019.05.07 at 19h 41m 12s.xml">
       <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 47m 48s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105422000" />
+    <option name="totallyTimeSpent" value="106544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,7 +575,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="823" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -578,14 +587,14 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49839914" weight="0.3480226" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32968536" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.24760602" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.24760602" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32831737" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32831737" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.6248666" weight="0.26440677" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" visible="true" weight="0.44596443" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" weight="0.2626539" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.3751334" side_tool="true" weight="0.23497267" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32881355" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -698,18 +707,6 @@
     <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/argument" />
     <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/affiliation" />
     <entry file="das://e4bfc55a-0c29-44a1-bee9-678f447f7a30/schema/main/table/argument_link" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2390#2391#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/SourceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1005,21 +1002,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="338">
           <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#542#543#0" expanded="true" />
             <element signature="e#596#597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ArgumentLinkSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
