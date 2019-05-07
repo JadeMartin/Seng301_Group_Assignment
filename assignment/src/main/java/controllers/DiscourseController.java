@@ -31,7 +31,7 @@ public class DiscourseController {
             String discourse_id =  discourseView.getDiscourseId(discourseSet);
 
             try {
-                discourseId = discourseView.convertToOption(discourse_id, discourseSet, "discourse_id");
+                discourseId = discourseView.convertToOption(discourse_id, "discourse", "discourse_id");
             } catch (Exception e) {
                 discourseView.displayIncorrectInput();
                 return 0;

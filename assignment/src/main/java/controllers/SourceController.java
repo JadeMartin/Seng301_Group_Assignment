@@ -31,7 +31,7 @@ public class SourceController {
             sourceSet = sourceRepository.getAll();
             String source_id = sourceView.getSourceId(sourceSet);
             try {
-                sourceId = sourceView.convertToOption(source_id, sourceSet, "source_id");
+                sourceId = sourceView.convertToOption(source_id, "source", "source_id");
             } catch (Exception e) {
                 sourceView.displayIncorrectInput();
                 return 0;

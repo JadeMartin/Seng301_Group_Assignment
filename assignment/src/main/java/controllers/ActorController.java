@@ -93,7 +93,7 @@ public class ActorController {
         try {
             ResultSet actorSet = actorRepository.getAll();
             String actorIdString = actorView.getActorId(actorSet);
-            return actorView.convertToOption(actorIdString, actorSet, "actor_id");
+            return actorView.convertToOption(actorIdString, "actor", "actor_id");
 
         } catch (SQLException e) {
             System.out.println(e);

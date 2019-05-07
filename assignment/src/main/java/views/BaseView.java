@@ -1,6 +1,7 @@
 package views;
 
 import models.Message;
+import repository.BaseRepository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,12 +13,14 @@ import java.util.Scanner;
  */
 public class BaseView {
     private Scanner scanner;
+    private BaseRepository baseRepository;
 
     /**
      * Constructor
      */
     public BaseView() {
         setScanner();
+        baseRepository = new BaseRepository();
     }
 
     /**
@@ -60,14 +63,17 @@ public class BaseView {
         }
     }
 
-    public int convertToOption(String inputString, ResultSet resultSet, String colName) throws SQLException {
+    public int convertToOption(String inputString, String tableName, String colName) throws SQLException {
+        ResultSet resultSet = baseRepository.getAllByTableName(tableName);
+
         int input = Integer.parseInt(inputString);
 
         if (input == 0) {
             return input;
         }
-
         while (resultSet.next()) {
+            System.out.println(resultSet.getInt(colName));
+            System.out.println(input);
             if (resultSet.getInt(colName) == input) {
                 return input;
             }
