@@ -106,7 +106,7 @@ public class BaseView {
      * Displays the message relating to if the input is an incorrect format
      */
     public void displayIncorrectInput() {
-        displayError("Input is an incorrect format");
+        displayError("Input is incorrect");
     }
 
     /**

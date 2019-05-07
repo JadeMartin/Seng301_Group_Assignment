@@ -38,13 +38,37 @@ public class ArgumentController {
             argumentView.displayIncorrectInput();
         }
 
-        int argumentStart = argumentView.getStart();
-        int argumentEnd = argumentView.getEnd();
-        Argument argument = new Argument(discourseId, actorId, argumentRephrasing, argumentStart, argumentEnd);
+        String argumentStart = argumentView.getStart();
+        int start;
+        try {
+            start = argumentView.convertTo(argumentStart);
+            if (start == -1){
+                return;
+            }
+        } catch (Exception e) {
+            argumentView.displayIncorrectInput();
+            return;
+        }
+
+        String argumentEnd = argumentView.getEnd();
+        int end;
+        try {
+            end = argumentView.convertTo(argumentEnd);
+            if (end <= start) {
+                //TODO change message to end needs to be after start
+                argumentView.displayIncorrectInput();
+                return;
+            }
+        } catch (Exception e) {
+            argumentView.displayIncorrectInput();
+            return;
+        }
+
+        Argument argument = new Argument(discourseId, actorId, argumentRephrasing, start, end);
 
         // Try to insert argument and display message based on success
         try {
-            if(argumentRepository.checkDuplicate(discourseId, argumentStart, argumentEnd)){
+            if(argumentRepository.checkDuplicate(discourseId, start, end)){
                 argumentView.displayDuplicateArgument();
             } else {
                 argumentRepository.insert(argument);
@@ -65,27 +89,38 @@ public class ArgumentController {
      */
     public void insertArgumentLink() {
         boolean boolLink = false;
-        int link = 0;
-        int argumentTwoId = 0;
+        int argumentOne = 0;
+        int argumentTwo = 0;
+        //TODO check arguement one and two are not the same
+
         try {
             ResultSet arguments = argumentRepository.getAll();
-            int argumentOneId = argumentView.displayArguments(arguments);
-            if (argumentOneId != 0) {
-                argumentTwoId = argumentView.getArgumentTwo(argumentOneId);
-                if (argumentTwoId != 0) {
-                    link = argumentView.getArgumentLink();
-                    if (link == 1) {
-                        boolLink = true;
-                    } else if (link == 2) {
-                        boolLink = false;
+            String argumentOneId = argumentView.displayArguments(arguments);
+            String argumentTwoId = argumentView.getArgumentTwo();
+
+            try {
+                argumentOne = argumentView.convertTo(argumentOneId);
+            } catch (Exception e) {
+                argumentView.displayIncorrectInput();
+            }
+            if (argumentOne != 0) {
+                try {
+                    argumentTwo = argumentView.convertTo(argumentTwoId);
+                } catch (Exception e) {
+                    argumentView.displayIncorrectInput();
+                }
+                if (argumentTwo != 0) {
+                    String link = argumentView.getArgumentLink();
+                    try {
+                        boolLink = argumentView.convertToBool(link);
+                        ArgumentLink argumentLink = new ArgumentLink(argumentOne, argumentTwo, boolLink);
+                        argumentRepository.insertLink(argumentLink);
+                        argumentView.displaySuccessMessage();
+                    } catch (Exception e) {
+                            argumentView.displayIncorrectInput();
+                        }
                     }
                 }
-            }
-            if (link != 0) {
-                ArgumentLink argumentLink = new ArgumentLink(argumentOneId, argumentTwoId, boolLink);
-                argumentRepository.insertLink(argumentLink);
-                argumentView.displaySuccessMessage();
-            }
         } catch (SQLException e) {
             System.out.println(e);
         }

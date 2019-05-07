@@ -25,13 +25,21 @@ public class DiscourseController {
      * @return discourse int id for the actor selected
      */
     public int selectDiscourse(int sourceId) {
+        int discourseId = 0;
         try {
             ResultSet discourseSet = discourseRepository.getAllBySource(sourceId);
-            return discourseView.getDiscourseId(discourseSet);
+            String discourse_id =  discourseView.getDiscourseId(discourseSet);
+
+            try {
+                discourseId = discourseView.convertToOption(discourse_id, discourseSet, "discourse_id");
+            } catch (Exception e) {
+                discourseView.displayIncorrectInput();
+                return 0;
+            }
         } catch (SQLException e) {
             System.out.println(e);
         }
         // return 0 to return user to main menu
-        return 0;
+        return discourseId;
     }
 }

@@ -25,13 +25,21 @@ public class SourceController {
      * @return sourceId int id for the source selected
      */
     public int selectSource() {
+        ResultSet sourceSet;
+        int sourceId = 0;
         try {
-            ResultSet sourceSet = sourceRepository.getAll();
-            return sourceView.getSourceId(sourceSet);
+            sourceSet = sourceRepository.getAll();
+            String source_id = sourceView.getSourceId(sourceSet);
+            try {
+                sourceId = sourceView.convertToOption(source_id, sourceSet, "source_id");
+            } catch (Exception e) {
+                sourceView.displayIncorrectInput();
+                return 0;
+            }
         } catch (SQLException e) {
             System.out.println(e);
         }
         // return 0 to return user to main menu
-        return 0;
+        return sourceId;
     }
 }
