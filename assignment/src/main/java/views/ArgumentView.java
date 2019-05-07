@@ -43,6 +43,12 @@ public class ArgumentView extends BaseView {
         }
     }
 
+    public void validateNotSameArgument(int arg1, int arg2) {
+        if (arg1 == arg2) {
+            throw new RuntimeException();
+        }
+    }
+
     public void displayDuplicateArgument() {
         super.displayError("This argument already exists");
     }
@@ -109,6 +115,8 @@ public class ArgumentView extends BaseView {
             throw new RuntimeException();
         }
     }
+
+
 
     public void displaySameArgument() {
         super.displayError("Can not select the same argument twice to create a link");

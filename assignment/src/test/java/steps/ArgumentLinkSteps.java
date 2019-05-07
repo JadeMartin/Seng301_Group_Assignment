@@ -46,13 +46,10 @@ public class ArgumentLinkSteps {
     @Given("I create an argument link by inputting {string} for argument one and {string} for argument two with argument type {string}")
     public void iCreateAnArgumentLinkByInputtingForArgumentAndForArgumentWithArgumentType(String arg1String, String arg2String, String argTypeString) {
         try {
-            System.out.println("here0");
             int arg1 = argumentView.convertToOption(arg1String, "argument", "argument_id");
-            System.out.println("here1");
             int arg2 = argumentView.convertToOption(arg2String, "argument", "argument_id");
-            System.out.println("here2");
+            argumentView.validateNotSameArgument(arg1, arg2);
             boolean argType = argumentView.convertToBool(argTypeString);
-            System.out.println("here3");
 
             currentArgumentLink = new ArgumentLink(arg1, arg2, argType);
         } catch (Exception e) {
