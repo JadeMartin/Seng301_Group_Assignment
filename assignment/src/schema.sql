@@ -13,15 +13,11 @@ PRAGMA foreign_keys = ON;
 
 create table actor
 (
-	actor_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	actor_id INTEGER PRIMARY KEY,
 	first_name text not null,
 	last_name text not null,
 	level_of_trust unsigned double default null
 )
-;
-
-create unique index actor_actor_id_uindex
-	on actor (actor_id)
 ;
 
 -- unexpected locus for key
@@ -29,17 +25,15 @@ create unique index actor_actor_id_uindex
 
 create table affiliation
 (
-	affiliation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	affiliation_id INTEGER PRIMARY KEY,
 	role text default null,
 	start_date text default null,
 	end_date text default null,
 	organisation_id integer default null,
-	actor_id integer not null
+	actor_id integer not null,
+	FOREIGN KEY(actor_id) REFERENCES actor(actor_id),
+	FOREIGN KEY(organisation_id) REFERENCES organisation(organisation_id)
 )
-;
-
-create unique index affiliation_affiliation_id_uindex
-	on affiliation (affiliation_id)
 ;
 
 -- unexpected locus for key
@@ -47,19 +41,21 @@ create unique index affiliation_affiliation_id_uindex
 
 create table argument
 (
-	argument_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	argument_id INTEGER PRIMARY KEY,
 	discourse_id integer not null,
 	actor_id integer not null,
 	rephrasing text not null,
 	start integer not null,
 	end integer not null,
-	confidence unsigned double default null
+	confidence unsigned double default null,
+	FOREIGN KEY(actor_id) REFERENCES actor(actor_id),
+	FOREIGN KEY(discourse_id) REFERENCES discourse(discourse_id)
 )
 ;
 
 create table argument_link
 (
-	argument_link_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	argument_link_id INTEGER PRIMARY KEY,
 	argument_one_id integer not null,
 	argument_two_id integer not null,
 	argument_link_type boolean not null
@@ -68,15 +64,16 @@ create table argument_link
 
 create table discourse
 (
-	discourse_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	discourse_id INTEGER PRIMARY KEY,
 	source_id integer not null,
-	name text not null
+	name text not null,
+	FOREIGN KEY(source_id) REFERENCES source(source_id)
 )
 ;
 
 create table organisation
 (
-	organisation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	organisation_id INTEGER PRIMARY KEY,
 	name text not null
 		unique
 )
@@ -84,7 +81,7 @@ create table organisation
 
 create table source
 (
-	source_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	source_id INTEGER PRIMARY KEY,
 	name text not null,
 	confidence unsigned double default null
 )
