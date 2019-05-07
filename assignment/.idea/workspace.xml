@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="finishe documenting and updating database">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DiscourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DiscourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Affiliation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Affiliation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Discourse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Organisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Source.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ActorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ActorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ArgumentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ArgumentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/OrganisationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ActorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ActorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/AffiliationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/AffiliationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ArgumentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/BaseView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/DiscourseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/DiscourseView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/OrganisationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/OrganisationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/SourceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/SourceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/ActorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/ActorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/BaseTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -128,67 +105,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/unit/ActorTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="368">
+              <caret line="95" column="95" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/unit/BaseTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+            <state relative-caret-position="379">
+              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-492">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
@@ -206,6 +145,8 @@
     <findStrings>
       <find>double</find>
       <find>I have inserted an actor, discourse and source and some test arguments</find>
+      <find>actorController</find>
+      <find>ActorController</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Message.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/test/javaSteps/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/common/Background.java" />
@@ -269,7 +208,9 @@
         <option value="$PROJECT_DIR$/src/main/java/views/ActorView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/AffiliationView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/OrganisationView.java" />
+        <option value="$PROJECT_DIR$/src/test/java/unit/BaseTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/unit/ActorTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java" />
       </list>
     </option>
   </component>
@@ -574,39 +515,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRunner - 2019.05.07 at 17h 07m 53s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 23m 42s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 08m 29s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 28m 37s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 09m 34s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 29m 07s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 14m 08s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 30m 53s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 14m 58s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 31m 37s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 15m 24s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 32m 48s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 19m 17s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 33m 24s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 20m 27s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 35m 40s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 28m 22s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 36m 37s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRunner - 2019.05.07 at 17h 32m 15s.xml">
-      <configuration name="TestRunner" configurationId="JUnit" />
+    <history-entry file="unit_in_assignment - 2019.05.07 at 19h 37m 27s.xml">
+      <configuration name="unit in assignment" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102911000" />
+    <option name="totallyTimeSpent" value="105028000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -632,14 +573,14 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49839914" weight="0.3480226" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32968536" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.24760602" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.24760602" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32831737" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32831737" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.6248666" weight="0.26440677" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" visible="true" weight="0.44596443" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49893278" weight="0.44596443" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.3751334" side_tool="true" weight="0.23497267" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32881355" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -713,27 +654,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="finishe documenting and updating database" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/CreateOrganisationSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/CreateArgumentSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="32" selection-start-line="32" selection-end-line="36" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/createArgument.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="33" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/createArgumentLink.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -947,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
@@ -1025,29 +938,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/OrganisationView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/BaseTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-637">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/ActorTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="87" column="93" selection-start-line="87" selection-start-column="93" selection-end-line="87" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1598#1599#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/unit/AffiliationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="95" column="95" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
           </folding>
         </state>
       </provider>

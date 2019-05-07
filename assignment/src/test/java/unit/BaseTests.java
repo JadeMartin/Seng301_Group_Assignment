@@ -93,4 +93,5 @@ public class BaseTests {
         baseView.displayOutOfBounds();
         Assert.assertEquals(output.toString().trim(), "Error: Input is out of bounds");
     }
+
 }
