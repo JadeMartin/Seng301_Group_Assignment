@@ -60,6 +60,11 @@ public class ActorController {
         }
     }
 
+    /**
+     * Insert an actor if it is registered to not be a homonym
+     * @param actor takes in a actor java class and inserts in to database
+     * @throws SQLException
+     */
     public void insertIfNotHomonym(Actor actor) throws SQLException{
         if (!askIfHomonym(actor)) {
             actorRepository.insert(actor);
@@ -69,8 +74,15 @@ public class ActorController {
         }
     }
 
+    /**
+     * Function to ask user whether the inputted actor is original or is a homonym
+     * Firs outputs all affiliations of the actor then asks for user input
+     * @param actor
+     * @return boolean depending on if the actor is to be accepted or not
+     * @throws SQLException
+     * @throws RuntimeException
+     */
     private boolean askIfHomonym(Actor actor) throws SQLException, RuntimeException {
-        //TODO: Display affiliations
         boolean isHomonym = false;
         ResultSet actorSet = actorRepository.getAllByFirstAndLast(actor.getFirstName(), actor.getLastName());
 
@@ -79,13 +91,10 @@ public class ActorController {
             ResultSet affiliationSet = affiliationRepository.getAffiliations(actorSet.getInt("actor_id"));
             String homonymInput = actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"), affiliationSet);
             isHomonym = actorView.convertHomonymInput(homonymInput);
-
             if (isHomonym) {
-
                 return true;
             }
         }
-
         return isHomonym;
     }
 

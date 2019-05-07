@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2da43a-f486-406f-b173-e55b9852768c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ActorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ActorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ActorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/ActorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/AffiliationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/AffiliationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -111,16 +106,16 @@
     <session id="738873356">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2493" />
+          <entry key="java" value="3126" />
           <entry key="sbtShell" value="766" />
           <entry key="sql" value="311" />
-          <entry key="txt" value="140" />
+          <entry key="txt" value="213" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2492" />
-          <entry key="PLAIN_TEXT" value="140" />
+          <entry key="JAVA" value="3125" />
+          <entry key="PLAIN_TEXT" value="213" />
           <entry key="SQL" value="31" />
           <entry key="Scratch" value="281" />
           <entry key="sbtShell" value="766" />
@@ -133,7 +128,7 @@
           <entry key="argument" value="6" />
           <entry key="argument_link" value="2" />
           <entry key="discourse" value="1" />
-          <entry key="java" value="35" />
+          <entry key="java" value="37" />
           <entry key="source" value="2" />
           <entry key="sql" value="7" />
           <entry key="sqlite_autoindex_organisation_1" value="1" />
@@ -142,7 +137,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="14" />
-          <entry key="JAVA" value="35" />
+          <entry key="JAVA" value="37" />
           <entry key="SQL" value="4" />
           <entry key="Scratch" value="4" />
         </counts>
@@ -157,110 +152,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/ArgumentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/ArgumentView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-              <folding>
-                <element signature="e#2593#2594#0" expanded="true" />
-                <element signature="e#2655#2656#0" expanded="true" />
-                <element signature="e#2701#2702#0" expanded="true" />
-                <element signature="e#2770#2771#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/views/DiscourseView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/ActorRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/affiliation">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="345">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -308,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/test/java/steps/common/BackgroundSteps.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Actor.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/OrganisationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Affiliation.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Discourse.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Source.java" />
@@ -338,9 +233,10 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/ArgumentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/ActorRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/AffiliationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/AffiliationView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/ActorView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ActorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java" />
       </list>
     </option>
   </component>
@@ -428,7 +324,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;das://28e6ec18-fc4c-4672-8292-7b332cbd896e/schema/main/table/organisation/index/sqlite_autoindex_organisation_1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557206027966" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557206648575" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -675,7 +571,7 @@
       <workItem from="1557107463761" duration="6904000" />
       <workItem from="1557130611077" duration="6449000" />
       <workItem from="1557184819909" duration="4223000" />
-      <workItem from="1557199652134" duration="6315000" />
+      <workItem from="1557199652134" duration="6930000" />
     </task>
     <task id="LOCAL-00001" summary="Added menu and actor still needs db connection and affiliations to be configured correctly">
       <created>1556803998477</created>
@@ -726,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557204911860</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed affiliations to be displayed when a homonym acctor is inserted">
+      <created>1557206064758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557206064758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -762,7 +665,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97299000" />
+    <option name="totallyTimeSpent" value="97914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -777,7 +680,7 @@
     <frame x="0" y="-1" width="1680" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23990208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23333333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -792,11 +695,11 @@
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.116891064" weight="0.32768363" />
+      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.116891064" visible="true" weight="0.3270925" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32831737" />
-      <window_info active="true" anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.621787" visible="true" weight="0.43276837" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.621787" weight="0.42180616" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49632803" weight="0.4463277" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.378213" side_tool="true" visible="true" weight="0.43276837" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.378213" side_tool="true" weight="0.43276837" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32896176" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
@@ -809,7 +712,7 @@
       <window_info anchor="right" id="sbt" order="5" weight="0.3297568" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Gradle" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.14198287" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.13809524" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Maven Projects" order="11" />
@@ -871,7 +774,8 @@
     <MESSAGE value="calculated level of trust for an actor" />
     <MESSAGE value="fixed duplicate arguments creating a link" />
     <MESSAGE value="tidyed up outputs and fixed duplicate bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidyed up outputs and fixed duplicate bug" />
+    <MESSAGE value="fixed affiliations to be displayed when a homonym acctor is inserted" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed affiliations to be displayed when a homonym acctor is inserted" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28e6ec18-fc4c-4672-8292-7b332cbd896e/console_5.sql">
@@ -1005,13 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-580">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/ActorRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1036,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/AffiliationView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1052,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/ActorView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="529">
           <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
           <folding>
             <element signature="e#2593#2594#0" expanded="true" />
@@ -1060,6 +950,20 @@
             <element signature="e#2701#2702#0" expanded="true" />
             <element signature="e#2770#2771#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ActorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="83" column="7" lean-forward="true" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AffiliationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
         </state>
       </provider>
     </entry>
