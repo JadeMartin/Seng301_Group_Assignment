@@ -18,6 +18,12 @@ public class BackgroundTestRepository extends BaseRepository {
         statement = getConnection().prepareStatement("DELETE FROM affiliation");
         statement.execute();
 
+        statement = getConnection().prepareStatement("DELETE FROM argument");
+        statement.execute();
+
+        statement = getConnection().prepareStatement("DELETE FROM argument_link");
+        statement.execute();
+
         statement.closeOnCompletion();
     }
 }
