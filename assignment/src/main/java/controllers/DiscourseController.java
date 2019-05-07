@@ -2,13 +2,12 @@ package controllers;
 
 import repository.DiscourseRepository;
 import views.DiscourseView;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DiscourseController {
-    DiscourseView discourseView;
-    DiscourseRepository discourseRepository;
+ class DiscourseController {
+    private DiscourseView discourseView;
+    private DiscourseRepository discourseRepository;
 
     /**
      * Constructor for a discourse also initializing a view and repo for that discourse

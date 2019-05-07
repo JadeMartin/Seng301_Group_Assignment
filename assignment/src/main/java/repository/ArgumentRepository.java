@@ -2,7 +2,6 @@ package repository;
 
 import models.Argument;
 import models.ArgumentLink;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,6 +31,9 @@ public class ArgumentRepository extends BaseRepository {
         }
     }
 
+    /**
+     * Function to retrieve the argument confidence from the database
+     */
     public double getArgumentConfidence(boolean argumentLinkType, int argumentOne) throws SQLException  {
         double add = -1.00;
         if (argumentLinkType) {
@@ -47,6 +49,8 @@ public class ArgumentRepository extends BaseRepository {
         return add;
     }
 
+    /** Function to update an arguments confidence using the argument id to find the argument
+     */
     public void updateArgument(Integer id, Double confidence) throws SQLException {
         if (null != getConnection()) {
             PreparedStatement updateStatement = getConnection().prepareStatement("update argument set confidence = ? "
@@ -63,7 +67,6 @@ public class ArgumentRepository extends BaseRepository {
 
     /**
      * function to insert a argument link between two arguments
-     * @throws SQLException
      */
     public void insertLink(ArgumentLink argumentLink) throws SQLException {
         if (null != getConnection()) {
@@ -83,9 +86,6 @@ public class ArgumentRepository extends BaseRepository {
 
     /**
      * Check for duplicate entry with same start and end indexs
-     * @param discourseId
-     * @param argumentStart
-     * @param argumentEnd
      * @return boolean true for duplicate false for non duplicate entry
      */
     public boolean checkDuplicate(int discourseId, int argumentStart, int argumentEnd) throws SQLException {
@@ -103,13 +103,14 @@ public class ArgumentRepository extends BaseRepository {
 
     /**
      * Get all arguments in the database
-     * @return
-     * @throws SQLException
      */
     public ResultSet getAll() throws SQLException {
         return super.getAllByTableName("argument");
     }
 
+    /**
+     * Function to get a specific user from the given argument Id
+     */
     public int getUser(int argumentOne) throws SQLException {
         PreparedStatement statement = getConnection().prepareStatement("select * from argument where argument_id = ?");
         statement.setInt(1, argumentOne);

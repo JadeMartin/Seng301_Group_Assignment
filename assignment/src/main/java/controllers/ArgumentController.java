@@ -1,7 +1,6 @@
 package controllers;
 
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import models.Argument;
 import models.ArgumentLink;
 import repository.ActorRepository;
@@ -15,9 +14,9 @@ import java.sql.SQLException;
  * Controls Argument based functionality
  */
 public class ArgumentController {
-    ArgumentView argumentView;
-    ArgumentRepository argumentRepository;
-    ActorRepository actorRepository;
+    private ArgumentView argumentView;
+    private ArgumentRepository argumentRepository;
+    private ActorRepository actorRepository;
 
     /**
      * Constructor for an argument also creates the argument view and repo

@@ -33,9 +33,13 @@ public class AffiliationView extends BaseView {
         return getInput();
     }
 
+    /**
+     * Convert a string into a date object
+     */
     public Date convertToDate(String date) throws ParseException {
         return date == null ? null : new SimpleDateFormat("dd/MM/yyyy").parse(date);
     }
+
 
     public void displaySuccessMessage() {
         super.displaySuccess("Affiliation successfully inserted");
@@ -45,5 +49,4 @@ public class AffiliationView extends BaseView {
         super.displayError("Affiliation could not be inserted");
     }
 
-    public void displayIncorrectDateOrder() { super.displayError("Start date is not before end date"); }
 }

@@ -1,14 +1,11 @@
 package views;
 
-import models.Argument;
-
-import javax.swing.text.html.HTMLDocument;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ArgumentView extends BaseView {
-    ArrayList<Integer> ids = new ArrayList<Integer>();
+    private ArrayList<Integer> ids = new ArrayList<>();
 
     /**
      * Provides a user input for a user to submit their argument rephrasing
@@ -59,9 +56,7 @@ public class ArgumentView extends BaseView {
 
     /**
      * Display arguments so an argument can be selected via user input
-     * @param arguments
      * @return int argument id for selected argument
-     * @throws SQLException
      */
     public String displayArguments(ResultSet arguments) throws SQLException {
         System.out.println("Select an argument by entering an id: ");
@@ -86,7 +81,7 @@ public class ArgumentView extends BaseView {
 
     /**
      * provide user input to create an argument link
-     * @return boolean of the inputed link type either true for for or false for against
+     * @return boolean of the link type either true for backing or false for contradiction
      */
     public String getArgumentLink() {
         //check for 0 to go back to menu
@@ -97,6 +92,9 @@ public class ArgumentView extends BaseView {
         return getInput();
     }
 
+    /**
+     * Function to take an argument start or end and make sure it is above 0
+     */
     public int convertTo(String argumentStart) {
         int argumentIndex = Integer.parseInt(argumentStart);
         if(argumentIndex < 0) {
@@ -105,6 +103,9 @@ public class ArgumentView extends BaseView {
         return argumentIndex;
     }
 
+    /**
+     * function to take link input and convert into boolean true for backing and false for contradiction
+     */
     public boolean convertToBool(String link) {
         int linkInt = Integer.parseInt(link);
         if (linkInt == 1) {
@@ -119,10 +120,6 @@ public class ArgumentView extends BaseView {
 
 
     public void displaySameArgument() {
-        super.displayError("Can not select the same argument twice to create a link");
-    }
-
-    public void displayIncorrectEnd() {
-        super.displayError("Start needs to be before end index");
+        super.displayError("Can not select the same argument twice t0o create a link");
     }
 }

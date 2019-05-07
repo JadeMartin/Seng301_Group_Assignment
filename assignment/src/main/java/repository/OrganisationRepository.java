@@ -3,7 +3,6 @@ package repository;
 import models.Organisation;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 /**
  * Provides an interface with the database
@@ -11,8 +10,7 @@ import java.util.ArrayList;
 public class OrganisationRepository extends BaseRepository{
     /**
      * Inserts the given organisation into the database.db.
-     * @param
-     * @throws
+     * Takes in an organisation
      */
     public void insert(Organisation organisation) throws SQLException {
 
@@ -28,6 +26,9 @@ public class OrganisationRepository extends BaseRepository{
         }
     }
 
+    /**
+     * Function to get all organisations
+     */
     public ResultSet getAll() throws SQLException {
         return super.getAllByTableName("Organisation");
     }

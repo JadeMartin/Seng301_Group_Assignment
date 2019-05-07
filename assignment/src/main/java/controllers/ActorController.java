@@ -1,6 +1,5 @@
 package controllers;
 
-import models.Affiliation;
 import repository.ActorRepository;
 import repository.AffiliationRepository;
 import views.ActorView;
@@ -9,9 +8,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ActorController {
-    ActorView actorView;
-    ActorRepository actorRepository;
-    AffiliationRepository affiliationRepository;
+    private ActorView actorView;
+    private ActorRepository actorRepository;
+    private AffiliationRepository affiliationRepository;
 
     /**
      * Constructor
@@ -63,7 +62,6 @@ public class ActorController {
     /**
      * Insert an actor if it is registered to not be a homonym
      * @param actor takes in a actor java class and inserts in to database
-     * @throws SQLException
      */
     public void insertIfNotHomonym(Actor actor) throws SQLException{
         if (!askIfHomonym(actor)) {
@@ -77,25 +75,23 @@ public class ActorController {
     /**
      * Function to ask user whether the inputted actor is original or is a homonym
      * Firs outputs all affiliations of the actor then asks for user input
-     * @param actor
      * @return boolean depending on if the actor is to be accepted or not
-     * @throws SQLException
-     * @throws RuntimeException
      */
     private boolean askIfHomonym(Actor actor) throws SQLException, RuntimeException {
-        boolean isHomonym = false;
+        boolean isHomonym;
         ResultSet actorSet = actorRepository.getAllByFirstAndLast(actor.getFirstName(), actor.getLastName());
 
         while(actorSet.next()) {
             // Get and validate whether the actor is the same
             ResultSet affiliationSet = affiliationRepository.getAffiliations(actorSet.getInt("actor_id"));
-            String homonymInput = actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"), affiliationSet);
-            isHomonym = actorView.convertHomonymInput(homonymInput);
-            if (isHomonym) {
-                return true;
-            }
+            actorView.askIfHomonym(actorSet.getString("first_name"), actorSet.getString("last_name"), affiliationSet);
         }
-        return isHomonym;
+        String homonymInput = actorView.getHomonym(actor.getFirstName(), actor.getLastName());
+        isHomonym = actorView.convertHomonymInput(homonymInput);
+        if (!isHomonym) {
+            return true;
+        }
+        return false;
     }
 
     /**

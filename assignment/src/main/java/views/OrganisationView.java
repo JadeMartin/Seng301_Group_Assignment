@@ -1,10 +1,7 @@
 package views;
 
-import models.Organisation;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  * Contains anything that the user sees or interacts with
@@ -37,6 +34,9 @@ public class OrganisationView extends BaseView {
         super.displaySuccess("The organisation was inserted");
     }
 
+    /**
+     * Function to check whether an organisation name is in a valid format
+     **/
     public void isNameValidated(String organisationName) throws RuntimeException {
 
         if (organisationName == null) {
@@ -44,6 +44,9 @@ public class OrganisationView extends BaseView {
         }
     }
 
+    /**
+     * Function to convert an organisation and allows the name to also be null
+     */
     public Integer convertToOrgOption(String organisationIdString) throws SQLException {
 
         if (organisationIdString == null || organisationIdString.equals("")) {

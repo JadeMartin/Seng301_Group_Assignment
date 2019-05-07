@@ -71,6 +71,13 @@ public class MenuController {
         }
     }
 
+    /**
+     * Function to handle the affiliation creation
+     * Steps
+     * Start by asking for actor
+     * Then ask for organisation
+     * then create affiliation
+     */
     private void affiliationInsertHandler() {
 
         int actorId;
@@ -96,6 +103,14 @@ public class MenuController {
         }
     }
 
+    /**
+     *  Function to handle the affiliation creation
+     *  Steps
+     *  Start by asking for valid actor id
+     *  then ask for a source
+     *  then ask for a discourse
+     *  finally create an argument
+     */
     private void argumentInsertHandler() {
         int actorId = 0;
         try {

@@ -47,22 +47,21 @@ public class BaseView {
         return Integer.parseInt(scanner.nextLine());
     }
 
-    public Integer getIntInputOrNull() {
-        String input = scanner.nextLine();
-        return input.equals("") ? null : Integer.parseInt(input);
-    }
 
-    public Double getDoubleInput() {
-        String input = scanner.nextLine();
-        return input.equals("") ? null : Double.parseDouble(input);
-    }
-
+    /**
+     * Function to validate a string to make sure it is not null
+     * @param string
+     * @throws RuntimeException
+     */
     public void validateNotNullString(String string) throws RuntimeException {
         if (string.isEmpty()) {
             throw new RuntimeException();
         }
     }
 
+    /**
+     * Function to check that the input is in the correct bounds of the given range
+     */
     public int convertToOption(String inputString, String tableName, String colName) throws SQLException {
         ResultSet resultSet = baseRepository.getAllByTableName(tableName);
 
