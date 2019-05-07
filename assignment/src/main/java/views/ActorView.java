@@ -70,7 +70,7 @@ public class ActorView extends BaseView {
     }
 
     public String getHomonym(String firstName, String lastName) {
-        super.displayConfirmation("Would you like to insert the homonym actor?");
+        super.displayConfirmation("Would you like to insert the actor?");
         System.out.println(firstName +" "+ lastName);
         System.out.println("1: Yes\n" +
                 "2: No");
