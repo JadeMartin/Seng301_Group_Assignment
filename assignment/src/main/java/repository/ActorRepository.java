@@ -65,6 +65,8 @@ public class ActorRepository extends BaseRepository {
         return resultSet.getDouble("level_of_trust");
     }
 
+
+
 //    /**
 //     * List all Actors in the database
 //     * @param connection

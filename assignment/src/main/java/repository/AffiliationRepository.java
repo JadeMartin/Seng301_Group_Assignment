@@ -2,10 +2,7 @@ package repository;
 
 import models.Affiliation;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Types;
+import java.sql.*;
 import java.time.format.DateTimeFormatter;
 
 public class AffiliationRepository extends BaseRepository {
@@ -32,5 +29,13 @@ public class AffiliationRepository extends BaseRepository {
                 System.out.println("Failed to insert");
             }
         }
+
+    public ResultSet getAffiliations(int actor_id) throws SQLException {
+        PreparedStatement statement = getConnection().prepareStatement("select * from affiliation where actor_id = ? ");
+        statement.setInt(1, actor_id);
+        ResultSet resultSet = statement.executeQuery();
+        statement.closeOnCompletion();
+        return resultSet;
+    }
     }
 

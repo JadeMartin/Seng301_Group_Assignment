@@ -60,10 +60,10 @@ public class OrganisationView extends BaseView {
      */
     public String getOrganisationId(ResultSet resultSet) throws SQLException {
         System.out.println("Select an organisation by entering id or press enter to skip: ");
-        System.out.println("0: Back to menu");
+        System.out.println("0) Back to menu");
 
         while (resultSet.next()) {
-            System.out.println(String.format("%d: %s", resultSet.getInt("organisation_id"), resultSet.getString("name")));
+            System.out.println(String.format("%d) Name: %s", resultSet.getInt("organisation_id"), resultSet.getString("name")));
         }
         return getInput();
     }

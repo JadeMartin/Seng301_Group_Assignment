@@ -16,7 +16,6 @@ public class ArgumentRepository extends BaseRepository {
     * Inserts the given argument into the database.db.
     **/
     public void insert(Argument argument) throws SQLException {
-        //TODO check for valid input not null
         if (null != getConnection() && !argument.getRephrasing().equals("")) {
             PreparedStatement statement = getConnection().prepareStatement("insert into argument(discourse_id, actor_id, rephrasing, start, end) values (?,?,?,?,?)");
             // use indexes of wildcard ("?") starting from 1

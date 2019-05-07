@@ -25,6 +25,14 @@ public class AffiliationController {
         affiliationRepository = new AffiliationRepository();
     }
 
+    /**
+     * Insert affiliation
+     * Starts by asking for the role of the affiliation
+     * then the start and end dates which is formatted and validated
+     * finally insert the affiliation into the database
+     * @param actorId
+     * @param organisationId
+     */
     public void insertAffiliationHandler(int actorId, Integer organisationId) {
         String affiliationRole = affiliationView.getRole();
         Date startDate = null;
@@ -46,6 +54,11 @@ public class AffiliationController {
         insertAffiliation(affiliation);
     }
 
+    /**
+     * Function to validate the date strings
+     * @param startDate
+     * @param endDate
+     */
     public void validateDates(Date startDate, Date endDate) {
         if (startDate == null || endDate == null) {
             return;
